@@ -1,0 +1,10 @@
+D:\daima\sharpdis\Sharpdis\Sharpdis.Net\bin\Debug\netstandard2.1\Sharpdis.Net.deps.json
+D:\daima\sharpdis\Sharpdis\Sharpdis.Net\bin\Debug\netstandard2.1\Sharpdis.Net.dll
+D:\daima\sharpdis\Sharpdis\Sharpdis.Net\bin\Debug\netstandard2.1\Sharpdis.Net.pdb
+D:\daima\sharpdis\Sharpdis\Sharpdis.Net\obj\Debug\netstandard2.1\Sharpdis.Net.csproj.AssemblyReference.cache
+D:\daima\sharpdis\Sharpdis\Sharpdis.Net\obj\Debug\netstandard2.1\Sharpdis.Net.GeneratedMSBuildEditorConfig.editorconfig
+D:\daima\sharpdis\Sharpdis\Sharpdis.Net\obj\Debug\netstandard2.1\Sharpdis.Net.AssemblyInfoInputs.cache
+D:\daima\sharpdis\Sharpdis\Sharpdis.Net\obj\Debug\netstandard2.1\Sharpdis.Net.AssemblyInfo.cs
+D:\daima\sharpdis\Sharpdis\Sharpdis.Net\obj\Debug\netstandard2.1\Sharpdis.Net.csproj.CoreCompileInputs.cache
+D:\daima\sharpdis\Sharpdis\Sharpdis.Net\obj\Debug\netstandard2.1\Sharpdis.Net.dll
+D:\daima\sharpdis\Sharpdis\Sharpdis.Net\obj\Debug\netstandard2.1\Sharpdis.Net.pdb
