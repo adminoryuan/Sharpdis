@@ -48,7 +48,7 @@ namespace Sharpdis.Net.codec
                 {
                     char t =(char) input.ReadByte();
                     if (t == '\r')  
-                               input.ReadByte();
+                           input.ReadByte();
                     else { 
                         nodeStr += (char)t;
                         tempIndex++;
@@ -56,14 +56,9 @@ namespace Sharpdis.Net.codec
                 }
                 args[index++] = nodeStr;
 
-                index++;
                 
             }
-            foreach (var item in args)
-            {
-                Console.WriteLine(item);
-            }
-            output.Add(args);
+            output.Add(new RespRequestEntity());
 
         }
     }
