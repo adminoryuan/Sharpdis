@@ -3,7 +3,55 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.3.32929.385
 MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sharpdis.DataStructure", "Sharpdis.DataStructure\Sharpdis.DataStructure.csproj", "{00A51236-A983-4A51-9E3A-F2CC94E440E4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sharpdis.Net", "Sharpdis.Net\Sharpdis.Net.csproj", "{CE881113-A10D-4868-9308-7AE93FB52811}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sharpdis.Log", "Sharpdis.Log\Sharpdis.Log.csproj", "{A40687CD-B334-46B7-82A5-D1724785B1F8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sharpdis.cluster", "Sharpdis.cluster\Sharpdis.cluster.csproj", "{9B5BFE32-13C3-4330-AEC2-43CEC6E8157A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sharpdis.Untils", "Sharpdis.Untils\Sharpdis.Untils.csproj", "{FB6F0F0F-F38C-4809-9EC5-ECD5B28F9DEE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sharpdis.App", "Sharpdis.App\Sharpdis.App.csproj", "{20153145-2517-4254-9FD6-3D5EF0228B2D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sharpdis.Test", "Sharpdis.Test\Sharpdis.Test.csproj", "{FC6E81E8-9B07-4CAD-82E8-92B0556F8571}"
+EndProject
 Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{00A51236-A983-4A51-9E3A-F2CC94E440E4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{00A51236-A983-4A51-9E3A-F2CC94E440E4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{00A51236-A983-4A51-9E3A-F2CC94E440E4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{00A51236-A983-4A51-9E3A-F2CC94E440E4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CE881113-A10D-4868-9308-7AE93FB52811}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CE881113-A10D-4868-9308-7AE93FB52811}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CE881113-A10D-4868-9308-7AE93FB52811}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CE881113-A10D-4868-9308-7AE93FB52811}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A40687CD-B334-46B7-82A5-D1724785B1F8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A40687CD-B334-46B7-82A5-D1724785B1F8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A40687CD-B334-46B7-82A5-D1724785B1F8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A40687CD-B334-46B7-82A5-D1724785B1F8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9B5BFE32-13C3-4330-AEC2-43CEC6E8157A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9B5BFE32-13C3-4330-AEC2-43CEC6E8157A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9B5BFE32-13C3-4330-AEC2-43CEC6E8157A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9B5BFE32-13C3-4330-AEC2-43CEC6E8157A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FB6F0F0F-F38C-4809-9EC5-ECD5B28F9DEE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FB6F0F0F-F38C-4809-9EC5-ECD5B28F9DEE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FB6F0F0F-F38C-4809-9EC5-ECD5B28F9DEE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FB6F0F0F-F38C-4809-9EC5-ECD5B28F9DEE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{20153145-2517-4254-9FD6-3D5EF0228B2D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{20153145-2517-4254-9FD6-3D5EF0228B2D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{20153145-2517-4254-9FD6-3D5EF0228B2D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{20153145-2517-4254-9FD6-3D5EF0228B2D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FC6E81E8-9B07-4CAD-82E8-92B0556F8571}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FC6E81E8-9B07-4CAD-82E8-92B0556F8571}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FC6E81E8-9B07-4CAD-82E8-92B0556F8571}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FC6E81E8-9B07-4CAD-82E8-92B0556F8571}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
