@@ -5,6 +5,7 @@ using Microsoft.Extensions.Logging;
 using Sharpdis.Net.Entity;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 using System.Transactions;
 
@@ -20,10 +21,6 @@ namespace Sharpdis.Net.codec
             
             if (input.ReadByte() != '*')
             {
-                Console.WriteLine("协议错误");
-
-                input.Clear();
-                context.CloseAsync();
                 return;
             }
             int argsLen = (int)((char)input.ReadByte() - '0');
@@ -37,8 +34,6 @@ namespace Sharpdis.Net.codec
                 
                 if (input.ReadByte()!= '$')
                 {
-                    Console.WriteLine("resp 协议异常");
-                    context.CloseAsync();
                     return; 
                 }
                 int argCount = (int)((char)input.ReadByte()-'0');
@@ -54,12 +49,21 @@ namespace Sharpdis.Net.codec
                         tempIndex++;
                     }
                 }
-                args[index++] = nodeStr;
-
-                
+                args[index++] = nodeStr; 
             }
-            output.Add(new RespRequestEntity());
+            output.Add(new RespRequestEntity(args[0],args.Skip(0).ToArray()));
+            Console.WriteLine($"[cmd]= {args[0]}, values={ToString(args)}");
+        }
+        public static string ToString( string[] s)
+        {
+            StringBuilder builder = new StringBuilder();
 
+            foreach (var item in s)
+            {
+                builder.Append(item);
+                builder.Append(" ");
+            }
+            return builder.ToString();
         }
     }
 }

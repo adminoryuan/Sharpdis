@@ -8,3 +8,10 @@ D:\daima\sharpdis\Sharpdis\Sharpdis.Net\obj\Debug\netstandard2.1\Sharpdis.Net.As
 D:\daima\sharpdis\Sharpdis\Sharpdis.Net\obj\Debug\netstandard2.1\Sharpdis.Net.csproj.CoreCompileInputs.cache
 D:\daima\sharpdis\Sharpdis\Sharpdis.Net\obj\Debug\netstandard2.1\Sharpdis.Net.dll
 D:\daima\sharpdis\Sharpdis\Sharpdis.Net\obj\Debug\netstandard2.1\Sharpdis.Net.pdb
+D:\daima\sharpdis\Sharpdis\Sharpdis.Net\bin\Debug\netstandard2.1\Sharpdis.DataStructure.dll
+D:\daima\sharpdis\Sharpdis\Sharpdis.Net\bin\Debug\netstandard2.1\Sharpdis.DataStructure.pdb
+D:\daima\sharpdis\Sharpdis\Sharpdis.Net\obj\Debug\netstandard2.1\Sharpdis.Net.csproj.CopyComplete
+D:\daima\sharpdis\Sharpdis\Sharpdis.Net\bin\Debug\netstandard2.1\Sharpdis.Untils.dll
+D:\daima\sharpdis\Sharpdis\Sharpdis.Net\bin\Debug\netstandard2.1\Sharpdis.Untils.pdb
+D:\daima\sharpdis\Sharpdis\Sharpdis.Net\bin\Debug\netstandard2.1\Sharpdis.Common.dll
+D:\daima\sharpdis\Sharpdis\Sharpdis.Net\bin\Debug\netstandard2.1\Sharpdis.Common.pdb

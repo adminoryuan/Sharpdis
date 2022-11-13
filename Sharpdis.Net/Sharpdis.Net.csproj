@@ -13,4 +13,10 @@
     <PackageReference Include="DotNetty.Transport" Version="0.7.5" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Sharpdis.Common\Sharpdis.Common.csproj" />
+    <ProjectReference Include="..\Sharpdis.DataStructure\Sharpdis.DataStructure.csproj" />
+    <ProjectReference Include="..\Sharpdis.Untils\Sharpdis.Untils.csproj" />
+  </ItemGroup>
+
 </Project>

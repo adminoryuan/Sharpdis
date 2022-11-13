@@ -4,6 +4,120 @@
     "D:\\daima\\sharpdis\\Sharpdis\\Sharpdis.Net\\Sharpdis.Net.csproj": {}
   },
   "projects": {
+    "D:\\daima\\sharpdis\\Sharpdis\\Sharpdis.Common\\Sharpdis.Common.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\daima\\sharpdis\\Sharpdis\\Sharpdis.Common\\Sharpdis.Common.csproj",
+        "projectName": "Sharpdis.Common",
+        "projectPath": "D:\\daima\\sharpdis\\Sharpdis\\Sharpdis.Common\\Sharpdis.Common.csproj",
+        "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
+        "outputPath": "D:\\daima\\sharpdis\\Sharpdis\\Sharpdis.Common\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Administrator\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.1": {
+            "targetAlias": "netstandard2.1",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard2.1": {
+          "targetAlias": "netstandard2.1",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "NETStandard.Library": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.402\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\daima\\sharpdis\\Sharpdis\\Sharpdis.DataStructure\\Sharpdis.DataStructure.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\daima\\sharpdis\\Sharpdis\\Sharpdis.DataStructure\\Sharpdis.DataStructure.csproj",
+        "projectName": "Sharpdis.DataStructure",
+        "projectPath": "D:\\daima\\sharpdis\\Sharpdis\\Sharpdis.DataStructure\\Sharpdis.DataStructure.csproj",
+        "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
+        "outputPath": "D:\\daima\\sharpdis\\Sharpdis\\Sharpdis.DataStructure\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Administrator\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.1": {
+            "targetAlias": "netstandard2.1",
+            "projectReferences": {
+              "D:\\daima\\sharpdis\\Sharpdis\\Sharpdis.Common\\Sharpdis.Common.csproj": {
+                "projectPath": "D:\\daima\\sharpdis\\Sharpdis\\Sharpdis.Common\\Sharpdis.Common.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard2.1": {
+          "targetAlias": "netstandard2.1",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "NETStandard.Library": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.402\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
     "D:\\daima\\sharpdis\\Sharpdis\\Sharpdis.Net\\Sharpdis.Net.csproj": {
       "version": "1.0.0",
       "restore": {
@@ -27,7 +141,17 @@
         "frameworks": {
           "netstandard2.1": {
             "targetAlias": "netstandard2.1",
-            "projectReferences": {}
+            "projectReferences": {
+              "D:\\daima\\sharpdis\\Sharpdis\\Sharpdis.Common\\Sharpdis.Common.csproj": {
+                "projectPath": "D:\\daima\\sharpdis\\Sharpdis\\Sharpdis.Common\\Sharpdis.Common.csproj"
+              },
+              "D:\\daima\\sharpdis\\Sharpdis\\Sharpdis.DataStructure\\Sharpdis.DataStructure.csproj": {
+                "projectPath": "D:\\daima\\sharpdis\\Sharpdis\\Sharpdis.DataStructure\\Sharpdis.DataStructure.csproj"
+              },
+              "D:\\daima\\sharpdis\\Sharpdis\\Sharpdis.Untils\\Sharpdis.Untils.csproj": {
+                "projectPath": "D:\\daima\\sharpdis\\Sharpdis\\Sharpdis.Untils\\Sharpdis.Untils.csproj"
+              }
+            }
           }
         },
         "warningProperties": {
@@ -61,6 +185,61 @@
               "version": "[0.7.5, )"
             }
           },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "NETStandard.Library": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.402\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\daima\\sharpdis\\Sharpdis\\Sharpdis.Untils\\Sharpdis.Untils.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\daima\\sharpdis\\Sharpdis\\Sharpdis.Untils\\Sharpdis.Untils.csproj",
+        "projectName": "Sharpdis.Untils",
+        "projectPath": "D:\\daima\\sharpdis\\Sharpdis\\Sharpdis.Untils\\Sharpdis.Untils.csproj",
+        "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
+        "outputPath": "D:\\daima\\sharpdis\\Sharpdis\\Sharpdis.Untils\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Administrator\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.1": {
+            "targetAlias": "netstandard2.1",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard2.1": {
+          "targetAlias": "netstandard2.1",
           "imports": [
             "net461",
             "net462",
