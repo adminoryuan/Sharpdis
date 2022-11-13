@@ -222,6 +222,29 @@
           }
         }
       },
+      "Sharpdis.Common/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.1",
+        "compile": {
+          "bin/placeholder/Sharpdis.Common.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Sharpdis.Common.dll": {}
+        }
+      },
+      "Sharpdis.DataStructure/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.1",
+        "dependencies": {
+          "Sharpdis.Common": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Sharpdis.DataStructure.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Sharpdis.DataStructure.dll": {}
+        }
+      },
       "Sharpdis.Net/1.0.0": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.1",
@@ -230,7 +253,10 @@
           "DotNetty.Codecs": "0.7.5",
           "DotNetty.Common": "0.7.5",
           "DotNetty.Handlers": "0.7.5",
-          "DotNetty.Transport": "0.7.5"
+          "DotNetty.Transport": "0.7.5",
+          "Sharpdis.Common": "1.0.0",
+          "Sharpdis.DataStructure": "1.0.0",
+          "Sharpdis.Untils": "1.0.0"
         },
         "compile": {
           "bin/placeholder/Sharpdis.Net.dll": {}
@@ -559,6 +585,16 @@
         "useSharedDesignerContext.txt",
         "version.txt"
       ]
+    },
+    "Sharpdis.Common/1.0.0": {
+      "type": "project",
+      "path": "../Sharpdis.Common/Sharpdis.Common.csproj",
+      "msbuildProject": "../Sharpdis.Common/Sharpdis.Common.csproj"
+    },
+    "Sharpdis.DataStructure/1.0.0": {
+      "type": "project",
+      "path": "../Sharpdis.DataStructure/Sharpdis.DataStructure.csproj",
+      "msbuildProject": "../Sharpdis.DataStructure/Sharpdis.DataStructure.csproj"
     },
     "Sharpdis.Net/1.0.0": {
       "type": "project",
