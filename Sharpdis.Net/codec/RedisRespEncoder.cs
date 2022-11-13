@@ -9,13 +9,19 @@ using System.Text;
 namespace Sharpdis.Net.codec
 {
 
-    internal class RedisRespEncoder : MessageToByteEncoder<RespResEntity>
+    public class RedisRespEncoder : MessageToByteEncoder<RespResEntity>
     {
-        protected override void Encode(IChannelHandlerContext context, RespResEntity message, IByteBuffer output)
-        {
+        protected override void Encode(IChannelHandlerContext context, 
+                                        RespResEntity message, 
+                                        IByteBuffer output){
+            String prefix = "";
+            prefix += message.IsSucess ? "+" : "-";
 
-            output.WriteBytes(Encoding.UTF8.GetBytes("+OKOK \r\n"));
-            context.Channel.WriteAndFlushAsync(Encoding.UTF8.GetBytes("+OKOK \r\n"));
+            
+            prefix += message.Res;
+            prefix += " \r\n";
+            output.WriteBytes(Encoding.UTF8.GetBytes(prefix));
+
         }
     }
 }

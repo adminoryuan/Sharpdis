@@ -2,7 +2,9 @@
 using DotNetty.Transport.Bootstrapping;
 using DotNetty.Transport.Channels;
 using DotNetty.Transport.Channels.Sockets;
+using Sharpdis.DataStructure;
 using Sharpdis.Net.codec;
+using Sharpdis.Net.Entity;
 using Sharpdis.Net.handle;
 using System;
 using System.Collections.Generic;
@@ -34,8 +36,30 @@ namespace Sharpdis.Net.impl
                     pipelin.AddLast(new SharpdisHandle());
                 }));
             Console.WriteLine("Sharpdis Server start：[6379]");
+
+            init();
+          
             var chanle=await bootstrap.BindAsync(6379);
             
+        }
+        public void init()
+        {
+            Database.RegistCmd("COMMAND", new Func<string[], RespResEntity>(cmd =>
+            {
+                return new RespResEntity(true, "ok");
+            }));
+            Database.RegistCmd("info", new Func<string[], RespResEntity>(cmd =>
+            {
+
+                
+                return new RespResEntity(true, " ");
+            }));
+            Database.RegistCmd("Auth", new Func<string[], RespResEntity>(cmd =>
+            {
+
+                var res = cmd[1].Equals("admin") && cmd[2].Equals("pwd");
+                return new RespResEntity(res, res ? "！" : "！");
+            }));
         }
     }
 }

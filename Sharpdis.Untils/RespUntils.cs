@@ -5,11 +5,15 @@ using System.Text;
 namespace Sharpdis.Untils
 {
     /// <summary>
-    /// resp协议解析
+    /// resp协议
     /// </summary>
     
-    public class RespUntils
+
+    public class RespCheckUntils
     {
-        
+        public static bool ChechCmd(string[] cmd)
+        {
+            return true;
+        }
     }
 }
