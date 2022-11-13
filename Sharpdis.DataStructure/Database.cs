@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Sharpdis.Net.Entity
+namespace Sharpdis.DataStructure
 {
-    internal class RespEntity
+    internal class Database
     {
     }
 }

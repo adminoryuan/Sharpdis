@@ -14,7 +14,7 @@ namespace Sharpdis.App
           var server=  ISharpdisServer.GetSharpdis();
 
            server.Start();
-            Console.Read();
+           Console.Read();
         }
          
     }

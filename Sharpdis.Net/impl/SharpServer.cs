@@ -3,6 +3,7 @@ using DotNetty.Transport.Bootstrapping;
 using DotNetty.Transport.Channels;
 using DotNetty.Transport.Channels.Sockets;
 using Sharpdis.Net.codec;
+using Sharpdis.Net.handle;
 using System;
 using System.Collections.Generic;
 using System.Reflection.Emit;
@@ -29,6 +30,8 @@ namespace Sharpdis.Net.impl
                     var pipelin= chanle.Pipeline;
 
                     pipelin.AddLast(new RedisRespDecoder());
+                    pipelin.AddLast(new RedisRespEncoder());
+                    pipelin.AddLast(new SharpdisHandle());
                 }));
             Console.WriteLine("Sharpdis Server start：[6379]");
             var chanle=await bootstrap.BindAsync(6379);
