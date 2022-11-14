@@ -19,19 +19,32 @@ namespace Sharpdis.DataStructure
         static Database()
         {
             for (int i = 0; i < MAXdb; i++)
-                dbs[i] = new Dictionary<string, Structure>();
+                    dbs[i] = new Dictionary<string, Structure>();
             
         }
-        public static T getStrucutr<T>(string key) where T : Structure
+
+        /// <summary>
+        /// 如何不存在则创建
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="key"></param>
+        /// <returns></returns>
+        public static T CrateStrucutr<T>(string key) where T : Structure
         {
-            var val = dbs[selectIndex][key];
+            var val = dbs[selectIndex].GetValueOrDefault(key,null);
 
             if (val == null)
             {
-                if (typeof(T) is List)
-                    val = new ListStucture();
+                 val = new ListStucture();
+
+                dbs[selectIndex][key] = val;
             }
             return (T)val;
+        }
+        
+        public static Structure getStrucutr(string key)
+        {
+            return dbs[selectIndex].GetValueOrDefault(key, null);
         }
     }
 }

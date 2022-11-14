@@ -60,6 +60,8 @@ namespace Sharpdis.Net.impl
                 var res = cmd[1].Equals("admin") && cmd[2].Equals("pwd");
                 return new RespResEntity(res, res ? "！" : "！");
             }));
+
+            List.RegistCmd();
         }
     }
 }
