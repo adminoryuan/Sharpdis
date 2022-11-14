@@ -44,17 +44,17 @@ namespace Sharpdis.Net.impl
         }
         public void init()
         {
-            Database.RegistCmd("COMMAND", new Func<string[], RespResEntity>(cmd =>
+            CmdTable.RegistCmd("COMMAND", new Func<string[], RespResEntity>(cmd =>
             {
                 return new RespResEntity(true, "ok");
             }));
-            Database.RegistCmd("info", new Func<string[], RespResEntity>(cmd =>
+            CmdTable.RegistCmd("info", new Func<string[], RespResEntity>(cmd =>
             {
 
                 
                 return new RespResEntity(true, " ");
             }));
-            Database.RegistCmd("Auth", new Func<string[], RespResEntity>(cmd =>
+            CmdTable.RegistCmd("Auth", new Func<string[], RespResEntity>(cmd =>
             {
 
                 var res = cmd[1].Equals("admin") && cmd[2].Equals("pwd");

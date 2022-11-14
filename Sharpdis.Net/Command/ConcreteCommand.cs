@@ -12,7 +12,7 @@ namespace Sharpdis.Net.Command
 
         public RespResEntity? execute(RespRequestEntity respReq)
         {
-            return Database.GetCmdFunc(respReq.headers)?.Invoke(respReq.body);
+            return CmdTable.GetCmdFunc(respReq.headers)?.Invoke(respReq.body);
         }
     }
 }
