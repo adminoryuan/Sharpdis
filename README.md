@@ -8,7 +8,7 @@
  - [ ] hash
  - [ ] zset
  - # 通信协议
- - [ ] RESP 实现
+ - [x] RESP 实现
  - # 网络模型
  - [x] 采用reactor模型
  - # 持久化
