@@ -15,8 +15,12 @@ namespace Sharpdis.App
 
            server.Start();
 
+            
             String banner = "  __                                 \r\n /    /                      | /     \r\n(___ (___  ___  ___  ___  ___|   ___ \r\n    )|   )|   )|   )|   )|   )| |___ \r\n __/ |  / |__/||    |__/ |__/ |  __/ \r\n                    |                \r\n";
+            
             Console.WriteLine(banner);
+
+
             while (true)
                  Console.ReadLine();
         }
