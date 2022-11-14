@@ -14,12 +14,26 @@ namespace Sharpdis.Net.codec
         protected override void Encode(IChannelHandlerContext context, 
                                         RespResEntity message, 
                                         IByteBuffer output){
-            String prefix = "";
-            prefix += message.IsSucess ? "+" : "-";
+            string prefix = "";
 
-            
-            prefix += message.Res;
-            prefix += " \r\n";
+            if (message.Res is null || message.Res is string)
+            {
+                prefix += message.IsSucess ? "+" : "-";
+                prefix += message.Res == null ? "nil" : message.Res;
+                prefix += " \r\n";
+
+            }
+            else if (message.Res is string[])
+            {
+                string[] res = (string[])message.Res;
+                prefix += $"*{res.Length}\r\n";
+                foreach (var item in res)
+                {
+                    prefix += $"${item.Length}\r\n";
+                    prefix += item;
+                    prefix += "\r\n";
+                }
+            }
             output.WriteBytes(Encoding.UTF8.GetBytes(prefix));
 
         }
