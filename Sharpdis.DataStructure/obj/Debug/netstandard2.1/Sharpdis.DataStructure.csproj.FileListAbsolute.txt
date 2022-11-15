@@ -11,3 +11,5 @@ D:\daima\sharpdis\Sharpdis\Sharpdis.DataStructure\obj\Debug\netstandard2.1\Sharp
 D:\daima\sharpdis\Sharpdis\Sharpdis.DataStructure\bin\Debug\netstandard2.1\Sharpdis.Common.dll
 D:\daima\sharpdis\Sharpdis\Sharpdis.DataStructure\bin\Debug\netstandard2.1\Sharpdis.Common.pdb
 D:\daima\sharpdis\Sharpdis\Sharpdis.DataStructure\obj\Debug\netstandard2.1\Sharpdis.DataStructure.csproj.CopyComplete
+D:\daima\sharpdis\Sharpdis\Sharpdis.DataStructure\bin\Debug\netstandard2.1\Sharpdis.Untils.dll
+D:\daima\sharpdis\Sharpdis\Sharpdis.DataStructure\bin\Debug\netstandard2.1\Sharpdis.Untils.pdb
