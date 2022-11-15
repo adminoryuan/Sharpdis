@@ -8,7 +8,7 @@ namespace Sharpdis.DataStructure.structure
     {
         private int _ex;
 
-        public int Ex { get { return _ex; } set { _ex = value; } }
+        public int expire { get { return _ex; } set { _ex = value; } }
          
 
     }
