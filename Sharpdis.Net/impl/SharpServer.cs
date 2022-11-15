@@ -62,6 +62,8 @@ namespace Sharpdis.Net.impl
             }));
             Hash.registCmd();
             List.RegistCmd();
+
+            StringCmd.registCmd();
         }
     }
 }

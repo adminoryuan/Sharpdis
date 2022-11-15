@@ -21,15 +21,29 @@ namespace Sharpdis.DataStructure
             if (cmd.Length < 2) return RespCheckUntils.getArgsError();
             string key = cmd[1];
             var l= Database.getStrucutr(key);
+            if (l == null) return new RespResEntity(false, "nil");
+            bool res = ((StringStructure)l).incr();
+            return new RespResEntity(res, res?"ok":"convent val error");
+
+        }
+        public static RespResEntity Get(string[] cmd)
+        {
+            if (cmd.Length < 2) return RespCheckUntils.getArgsError();
+            string key = cmd[1];
+            var l = Database.getStrucutr(key);
             if (l == null) return new RespResEntity(false, null);
 
-            return new RespResEntity(true, ((StringStructure)l).incr());
+            return new RespResEntity(true, Database.CrateStrucutr<StringStructure>(key).get());
 
         }
 
         public static void registCmd()
         {
+            CmdTable.RegistCmd("get", Get);
 
+            CmdTable.RegistCmd("set", Set);
+
+            CmdTable.RegistCmd("incr",Incr);
         }
     }
 }

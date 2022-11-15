@@ -15,10 +15,14 @@ namespace Sharpdis.DataStructure.structure
         public  bool incr()
         {
             int res;
-            if (int.TryParse(_val, out res))
+            if (!int.TryParse(_val, out res))
                 return false;
             _val=Convert.ToString(++res) ;
             return true;
+        }
+        public string get()
+        {
+            return _val;
         }
     }
 }
