@@ -2,10 +2,10 @@
 - # Sharpdis 是基于c# 实现的 redis
  - # 目的实现功能
  - # 数据结构
- - [ ] String
+ - [x] String
  - [ ] Set
- - [ ] List
- - [ ] hash
+ - [x] List
+ - [x] hash
  - [ ] zset
  - # 实现命令
  
