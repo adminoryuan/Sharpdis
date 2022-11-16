@@ -22,9 +22,25 @@ BIOS 版本:        LENOVO AGCN25WW(V1.08), 2019/11/13
 虚拟内存: 可用:   2,237 MB
 虚拟内存: 使用中: 11,014 MB
  ```
- - 测试数据
+ - 测试结果
  ```bash
-   
+   PING_INLINE: 18751.17 requests per second
+PING_BULK: 18705.57 requests per second
+SET: 20242.91 requests per second
+GET: 18754.69 requests per second
+INCR: 18839.49 requests per second
+LPUSH: 16363.93 requests per second
+RPUSH: 16249.59 requests per second
+LPOP: 18807.60 requests per second
+RPOP: 18268.18 requests per second
+SADD: 17503.94 requests per second
+SPOP: 18570.10 requests per second
+LPUSH (needed to benchmark LRANGE): 16353.23 requests per second
+LRANGE_100 (first 100 elements): 3068.90 requests per second
+LRANGE_300 (first 300 elements): 440.29 requests per second
+LRANGE_500 (first 450 elements): 291.50 requests per second
+LRANGE_600 (first 600 elements): 197.02 requests per second
+MSET (10 keys): 16798.25 requests per second
  ```
  - # 实现命令
  
