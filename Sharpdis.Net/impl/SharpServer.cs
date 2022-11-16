@@ -29,7 +29,9 @@ namespace Sharpdis.Net.impl
                 Group(boosgroup, workgroup)
                  .Channel<TcpServerSocketChannel>()
                  .Option(ChannelOption.SoReuseport,true)
-                .Option(ChannelOption.SoBacklog, 1000)
+                 .Option(ChannelOption.TcpNodelay,true)
+                .Option(ChannelOption.SoBacklog, 1024)
+                .Option(ChannelOption.SoKeepalive,true)
                 .Handler(new LoggingHandler())
                 .ChildHandler(new ActionChannelInitializer<ISocketChannel>(chanle =>
                 {
@@ -37,8 +39,8 @@ namespace Sharpdis.Net.impl
                     var pipelin= chanle.Pipeline;
                     pipelin.AddLast(new RedisRespDecoder());
                     pipelin.AddLast(new RedisRespEncoder());
-                    pipelin.AddLast(handle);
-                   // chanle.WriteAndFlushAsync(new RespResEntity(true, ""));
+
+                    pipelin.AddLast(new SharpdisHandle());
                 }));
             Console.WriteLine("Sharpdis Server start：[6379]");
 
@@ -49,17 +51,23 @@ namespace Sharpdis.Net.impl
         }
         public void init()
         {
-            CmdTable.RegistCmd("COMMAND", new Func<string[], RespResEntity>(cmd =>
+            CmdTable.RegistCmd("commad", new Func<string[], RespResEntity>(cmd =>
             {
-                return new RespResEntity(true, "ok");
+                return new RespResEntity(true, "OK");
             }));
             CmdTable.RegistCmd("info", new Func<string[], RespResEntity>(cmd =>
             {
 
                 
-                return new RespResEntity(true, " ");
+                return new RespResEntity(true, "my sharpdis");
             }));
-            CmdTable.RegistCmd("Auth", new Func<string[], RespResEntity>(cmd =>
+
+            CmdTable.RegistCmd("ping", new Func<string[], RespResEntity>(cmd =>
+            {
+                return new RespResEntity(true, "PONG");
+
+            }));
+            CmdTable.RegistCmd("auth", new Func<string[], RespResEntity>(cmd =>
             {
 
                 var res = cmd[1].Equals("admin") && cmd[2].Equals("pwd");
