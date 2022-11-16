@@ -1,15 +1,12 @@
 # Sharpdis
-- # Sharpdis 是基于c# 实现的 redis
- - # 目的实现功能
+-  Sharpdis 是基于c# 实现的 redis 服务端
+-  网络模块采用dotNetty实现
  - # 数据结构
  - [x] String
  - [x] Set
  - [x] List
  - [x] hash
- - [ ] zset
-
- - # 实现命令
- 
+ - [ ] zset 
  - # 通信协议
  - [x] RESP 实现
  - # 网络模型
