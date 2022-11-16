@@ -1,12 +1,12 @@
-﻿using Sharpdis.DataStructure.structure;
-using Sharpdis.Net.Entity;
+﻿using Sharpdis.Common.Entity;
+using Sharpdis.DataStructure.structure;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
 namespace Sharpdis.DataStructure
-{   
+{
 
     /// <summary>
     /// list命令的具体实现

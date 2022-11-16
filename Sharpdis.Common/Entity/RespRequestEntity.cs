@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Sharpdis.Net.Entity
+namespace Sharpdis.Common.Entity
 {
     public class RespRequestEntity
     {
@@ -17,8 +17,9 @@ namespace Sharpdis.Net.Entity
 
         public string headers { get { return _headers; } set { _headers = value; } }
 
-        public string[] body { get { return cmd; } set { cmd = value; } } }
-
+        public string[] body { get { return cmd; } set { cmd = value; } }
     }
+
+}
 
 

@@ -1,6 +1,6 @@
 ﻿using DotNetty.Transport.Channels;
+using Sharpdis.Common.Entity;
 using Sharpdis.Net.Command;
-using Sharpdis.Net.Entity;
 using Sharpdis.Untils;
 using System;
 using System.Collections.Generic;
@@ -9,7 +9,7 @@ using System.Text;
 namespace Sharpdis.Net.handle
 {
 
-  
+
     public class SharpdisHandle : SimpleChannelInboundHandler<RespRequestEntity>  
     {
         public override bool IsSharable => true;

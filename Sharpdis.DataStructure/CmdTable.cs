@@ -1,5 +1,5 @@
-﻿using Sharpdis.DataStructure.structure;
-using Sharpdis.Net.Entity;
+﻿using Sharpdis.Common.Entity;
+using Sharpdis.DataStructure.structure;
 using System;
 using System.Collections.Generic;
 using System.Linq;

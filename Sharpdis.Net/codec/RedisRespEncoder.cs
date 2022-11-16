@@ -1,7 +1,7 @@
 ﻿using DotNetty.Buffers;
 using DotNetty.Codecs;
 using DotNetty.Transport.Channels;
-using Sharpdis.Net.Entity;
+using Sharpdis.Common.Entity;
 using System;
 using System.Collections.Generic;
 using System.Text;

@@ -2,9 +2,9 @@
 using DotNetty.Transport.Bootstrapping;
 using DotNetty.Transport.Channels;
 using DotNetty.Transport.Channels.Sockets;
+using Sharpdis.Common.Entity;
 using Sharpdis.DataStructure;
 using Sharpdis.Net.codec;
-using Sharpdis.Net.Entity;
 using Sharpdis.Net.handle;
 using System;
 using System.Collections.Generic;
@@ -13,8 +13,8 @@ using System.Text;
 
 namespace Sharpdis.Net.impl
 {
-    
-    
+
+
     public class SharpServer :  ISharpdisServer
     {
 

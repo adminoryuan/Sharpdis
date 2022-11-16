@@ -2,7 +2,7 @@
 using DotNetty.Codecs;
 using DotNetty.Transport.Channels;
 using Microsoft.Extensions.Logging;
-using Sharpdis.Net.Entity;
+using Sharpdis.Common.Entity;
 using System;
 using System.Collections.Generic;
 using System.Linq;
