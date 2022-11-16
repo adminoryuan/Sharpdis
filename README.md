@@ -1,5 +1,5 @@
  - # Sharpdis 
--  Sharpdis 是基于c# 实现的 redis 服务端,网络模块采用dotNetty实现
+-  Sharpdis 是基于c# 实现的 redis 服务端,可使用redis-cli 进行链接,网络模块采用dotNetty实现
 -  ![效果图](https://github.com/adminoryuan/img/blob/master/a.png)
  -  
  - # 数据结构
