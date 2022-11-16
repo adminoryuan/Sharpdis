@@ -10,11 +10,15 @@ namespace Sharpdis.Untils
     /// </summary>
     
 
-    public class RespCheckUntils
+    public class RespResUntils
     {
         public static RespResEntity getArgsError()
         {
             return new RespResEntity(false, "Args error");
+        }
+        public static RespResEntity getNilRes()
+        {
+            return new RespResEntity(true, "nil");
         }
         public static bool ChechCmd(string[] cmd)
         {

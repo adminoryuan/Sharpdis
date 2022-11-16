@@ -17,8 +17,7 @@ namespace Sharpdis.Net.codec
        
         protected override void Decode(IChannelHandlerContext context, IByteBuffer input, List<object> output)
         {
-            string res = Encoding.UTF8.GetString(input.Array);
-            
+            input.ResetReaderIndex();
             if (input.ReadByte() != '*')
             {
                 return;
@@ -51,8 +50,9 @@ namespace Sharpdis.Net.codec
                 }
                 args[index++] = nodeStr; 
             }
-            output.Add(new RespRequestEntity(args[0],args.Skip(0).ToArray()));
             Console.WriteLine($"[cmd]= {args[0]}, values={ToString(args)}");
+            input.Clear();
+            output.Add(new RespRequestEntity(args[0],args));
         }
         public static string ToString( string[] s)
         {

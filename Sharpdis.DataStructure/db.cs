@@ -41,8 +41,10 @@ namespace Sharpdis.DataStructure
                     val = new HashStucture();
                 else if (typeof(T) == typeof(StringStructure))
                     val = new StringStructure();
+                else if (typeof(T)==typeof(SetStructure))
+                    val = new SetStructure();
 
-                 dbs[selectIndex][key] = val;
+                dbs[selectIndex][key] = val;
             }
             return (T)val;
         }

@@ -1,11 +1,12 @@
-﻿using Sharpdis.Net.impl;
+﻿using DotNetty.Transport.Channels;
+using Sharpdis.Net.impl;
 using System;
 using System.Collections.Generic;
 using System.Text;
 
 namespace Sharpdis.Net
 {
-    public interface ISharpdisServer
+    public interface ISharpdisServer 
     {
 
         public static ISharpdisServer GetSharpdis()
