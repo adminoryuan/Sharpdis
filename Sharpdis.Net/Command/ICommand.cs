@@ -1,4 +1,4 @@
-﻿using Sharpdis.Net.Entity;
+﻿using Sharpdis.Common.Entity;
 using System;
 using System.Collections.Generic;
 using System.Text;

@@ -1,6 +1,6 @@
 ﻿using DotNetty.Transport.Channels;
+using Sharpdis.Common.Entity;
 using Sharpdis.Net.Command;
-using Sharpdis.Net.Entity;
 using Sharpdis.Untils;
 using System;
 using System.Collections.Generic;
@@ -9,10 +9,10 @@ using System.Text;
 namespace Sharpdis.Net.handle
 {
 
-  
+
     public class SharpdisHandle : SimpleChannelInboundHandler<RespRequestEntity>  
     {
-        public override bool IsSharable => true;
+       // public override bool IsSharable => true;
 
         private ICommand cmd = ICommand.GetCommand();
         protected override void ChannelRead0(IChannelHandlerContext ctx, RespRequestEntity req)
@@ -25,6 +25,15 @@ namespace Sharpdis.Net.handle
             }
 
             ctx.Channel.WriteAndFlushAsync(cmd.execute(req));
+        }
+        public override void ChannelInactive(IChannelHandlerContext context)
+        {
+            base.ChannelInactive(context);
+
+        }
+        public override void ChannelUnregistered(IChannelHandlerContext context)
+        {
+            base.ChannelUnregistered(context);
         }
     }
 }

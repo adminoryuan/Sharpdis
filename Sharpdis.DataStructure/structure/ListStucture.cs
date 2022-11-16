@@ -14,20 +14,20 @@ namespace Sharpdis.DataStructure.structure
         }
         public string LPop()
         {
-            string val= link.Last?.Value;
+            string val= link.First?.Value;
             
             if(val!=null)
-                link.RemoveLast();
+                link.RemoveFirst();
 
             return val;
         }
 
         public string RPop()
         {
-            string val = link.First?.Value;
+            string val = link.Last?.Value;
 
             if(val!=null)
-                link.RemoveFirst();
+                link.RemoveLast();
 
             return val;
         }

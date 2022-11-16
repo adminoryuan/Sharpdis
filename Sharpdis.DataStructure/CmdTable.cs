@@ -1,5 +1,5 @@
-﻿using Sharpdis.DataStructure.structure;
-using Sharpdis.Net.Entity;
+﻿using Sharpdis.Common.Entity;
+using Sharpdis.DataStructure.structure;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -43,7 +43,7 @@ namespace Sharpdis.DataStructure
 
         private static Func<string[], RespResEntity> errFunc= new Func<string[], RespResEntity>(cmd =>
         {    
-            return new RespResEntity(false, "The command is not sh temporarily\r\n\r\n!");
+            return new RespResEntity(false, "The command is not sh temporarily!");
         });
         
         /// <summary>
@@ -53,6 +53,7 @@ namespace Sharpdis.DataStructure
         /// <returns></returns>
         public static Func<string[], RespResEntity> GetCmdFunc(string cmd)
         {
+            cmd = cmd.ToLower();
             if (!cmdKv.ContainsKey(cmd))
             {
                 return errFunc;

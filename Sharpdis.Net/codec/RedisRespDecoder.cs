@@ -2,7 +2,7 @@
 using DotNetty.Codecs;
 using DotNetty.Transport.Channels;
 using Microsoft.Extensions.Logging;
-using Sharpdis.Net.Entity;
+using Sharpdis.Common.Entity;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -17,9 +17,12 @@ namespace Sharpdis.Net.codec
        
         protected override void Decode(IChannelHandlerContext context, IByteBuffer input, List<object> output)
         {
-            input.ResetReaderIndex();
+            
+            
             if (input.ReadByte() != '*')
             {
+                input.Clear();
+                context.Channel.WriteAndFlushAsync(new RespResEntity(true,"PONG"));
                 return;
             }
             int argsLen = (int)((char)input.ReadByte() - '0');
@@ -50,7 +53,6 @@ namespace Sharpdis.Net.codec
                 }
                 args[index++] = nodeStr; 
             }
-            Console.WriteLine($"[cmd]= {args[0]}, values={ToString(args)}");
             input.Clear();
             output.Add(new RespRequestEntity(args[0],args));
         }
