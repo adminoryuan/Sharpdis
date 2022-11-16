@@ -23,13 +23,13 @@ namespace Sharpdis.Net.codec
                 prefix += " \r\n";
 
             }
-            else if (message.Res is string[])
+            else if (message.Res is Array)
             {
-                string[] res = (string[])message.Res;
+               Array res = (Array)message.Res;
                 prefix += $"*{res.Length}\r\n";
                 foreach (var item in res)
                 {
-                    prefix += $"${item.Length}\r\n";
+                    prefix += $"${item.ToString().Length}\r\n";
                     prefix += item;
                     prefix += "\r\n";
                 }

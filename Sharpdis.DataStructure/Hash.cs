@@ -13,7 +13,7 @@ namespace Sharpdis.DataStructure
         {
             if (cmd.Length < 3)
             {
-                return RespCheckUntils.getArgsError();
+                return RespResUntils.getArgsError();
             }
 
             string key = cmd[1];
@@ -29,7 +29,7 @@ namespace Sharpdis.DataStructure
         {
             if (cmd.Length < 3)
             {
-                return RespCheckUntils.getArgsError();
+                return RespResUntils.getArgsError();
             }
             string key = cmd[1];
             string hkey = cmd[2];
@@ -40,7 +40,7 @@ namespace Sharpdis.DataStructure
         {
             if (cmd.Length < 2)
             {
-                return RespCheckUntils.getArgsError();
+                return RespResUntils.getArgsError();
             }
             string key = cmd[1];
             var l = Database.getStrucutr(key);
@@ -53,7 +53,7 @@ namespace Sharpdis.DataStructure
         {
             if (cmd.Length < 3)
             {
-                return RespCheckUntils.getArgsError();
+                return RespResUntils.getArgsError();
             }
             string key = cmd[1];
             string hkey = cmd[2];
@@ -69,7 +69,7 @@ namespace Sharpdis.DataStructure
 
             if (cmd.Length < 2)
             {
-                return RespCheckUntils.getArgsError();
+                return RespResUntils.getArgsError();
             }
             string key = cmd[1];
             var l = Database.getStrucutr(key);
@@ -83,7 +83,7 @@ namespace Sharpdis.DataStructure
         {
             if (cmd.Length < 2)
             {
-                return RespCheckUntils.getArgsError();
+                return RespResUntils.getArgsError();
             }
             string key = cmd[1];
             var l = Database.getStrucutr(key);
