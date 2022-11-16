@@ -7,6 +7,18 @@
  - [x] List
  - [x] hash
  - [ ] zset
+
+ - # 实现命令
+ 
+ - # 通信协议
+ - [x] RESP 实现
+ - # 网络模型
+ - [x] 采用reactor模型
+ - # 持久化
+ - [ ] Aof
+ - [ ] RDB
+- # 集群
+-  [ ] 使用raft 构建集群
  - # 基准测试
   
   ```bash redis-benchmark.exe -h 127.0.0.1 -p 6379 -c 100 -n 100000 -q ```
@@ -42,14 +54,3 @@ LRANGE_500 (first 450 elements): 291.50 requests per second
 LRANGE_600 (first 600 elements): 197.02 requests per second
 MSET (10 keys): 16798.25 requests per second
  ```
- - # 实现命令
- 
- - # 通信协议
- - [x] RESP 实现
- - # 网络模型
- - [x] 采用reactor模型
- - # 持久化
- - [ ] Aof
- - [ ] RDB
-- # 集群
--  [ ] 使用raft 构建集群
