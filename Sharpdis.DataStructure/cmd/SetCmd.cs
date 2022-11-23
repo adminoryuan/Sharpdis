@@ -6,14 +6,14 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace Sharpdis.DataStructure
+namespace Sharpdis.DataStructure.cmd
 {
-    public static class SetCmd
+     static class SetCmd
     {
         public static RespResEntity SAdd(string[] cmd)
         {
             if (cmd.Length < 3) return RespResUntils.getArgsError();
-            
+
             string key = cmd[1];
 
             Database.CrateStrucutr<SetStructure>(key).SAdd(cmd.Skip(2).Take(cmd.Length - 1).ToArray());
@@ -22,17 +22,17 @@ namespace Sharpdis.DataStructure
         }
         public static RespResEntity SMEMBERS(string[] cmd)
         {
-            if (cmd.Length <2) return RespResUntils.getArgsError();
+            if (cmd.Length < 2) return RespResUntils.getArgsError();
             string key = cmd[1];
 
-             var l=Database.getStrucutr(key);
+            var l = Database.getStrucutr(key);
 
             if (l == null) return RespResUntils.getNilRes();
 
             return new RespResEntity(true, ((SetStructure)l).SMEMBERS());
 
         }
-         public static void RegistCmd()
+        public static void RegistCmd()
         {
             CmdTable.RegistCmd("sadd", SAdd);
             CmdTable.RegistCmd("smembers", SMEMBERS);

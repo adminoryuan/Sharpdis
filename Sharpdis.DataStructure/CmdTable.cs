@@ -1,4 +1,5 @@
 ﻿using Sharpdis.Common.Entity;
+using Sharpdis.DataStructure.cmd;
 using Sharpdis.DataStructure.structure;
 using System;
 using System.Collections.Generic;
@@ -17,6 +18,15 @@ namespace Sharpdis.DataStructure
         private static readonly Dictionary<string, Func<string[], RespResEntity>> cmdKv = Init();
 
         public static int selectcmdKv = 0;
+        static CmdTable()
+        {
+            //注册命令
+            SysCmd.RegistCmd();
+            HashCmd.registCmd();
+            ListCmd.RegistCmd();
+            SetCmd.RegistCmd();
+            StringCmd.registCmd();
+        }
 
         /// <summary>
         /// 初始化
@@ -25,9 +35,7 @@ namespace Sharpdis.DataStructure
         private static Dictionary<string,Func<string[], RespResEntity>> Init()
         {
            var cmdKvs= new Dictionary<string,Func<string[], RespResEntity>>();
-
-          
-           
+             
             return cmdKvs;
         }
 
