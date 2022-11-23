@@ -1,11 +1,49 @@
 {
   "version": 3,
   "targets": {
-    ".NETStandard,Version=v2.1": {}
+    ".NETStandard,Version=v2.1": {
+      "Sharpdis.Common/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.1",
+        "compile": {
+          "bin/placeholder/Sharpdis.Common.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Sharpdis.Common.dll": {}
+        }
+      },
+      "Sharpdis.Untils/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.1",
+        "dependencies": {
+          "Sharpdis.Common": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Sharpdis.Untils.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Sharpdis.Untils.dll": {}
+        }
+      }
+    }
   },
-  "libraries": {},
+  "libraries": {
+    "Sharpdis.Common/1.0.0": {
+      "type": "project",
+      "path": "../Sharpdis.Common/Sharpdis.Common.csproj",
+      "msbuildProject": "../Sharpdis.Common/Sharpdis.Common.csproj"
+    },
+    "Sharpdis.Untils/1.0.0": {
+      "type": "project",
+      "path": "../Sharpdis.Untils/Sharpdis.Untils.csproj",
+      "msbuildProject": "../Sharpdis.Untils/Sharpdis.Untils.csproj"
+    }
+  },
   "projectFileDependencyGroups": {
-    ".NETStandard,Version=v2.1": []
+    ".NETStandard,Version=v2.1": [
+      "Sharpdis.Common >= 1.0.0",
+      "Sharpdis.Untils >= 1.0.0"
+    ]
   },
   "packageFolders": {
     "C:\\Users\\Administrator\\.nuget\\packages\\": {}
@@ -33,7 +71,14 @@
       "frameworks": {
         "netstandard2.1": {
           "targetAlias": "netstandard2.1",
-          "projectReferences": {}
+          "projectReferences": {
+            "D:\\daima\\sharpdis\\Sharpdis\\Sharpdis.Common\\Sharpdis.Common.csproj": {
+              "projectPath": "D:\\daima\\sharpdis\\Sharpdis\\Sharpdis.Common\\Sharpdis.Common.csproj"
+            },
+            "D:\\daima\\sharpdis\\Sharpdis\\Sharpdis.Untils\\Sharpdis.Untils.csproj": {
+              "projectPath": "D:\\daima\\sharpdis\\Sharpdis\\Sharpdis.Untils\\Sharpdis.Untils.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

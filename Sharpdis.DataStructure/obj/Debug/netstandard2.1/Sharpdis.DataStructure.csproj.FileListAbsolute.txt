@@ -1,0 +1,15 @@
+D:\daima\sharpdis\Sharpdis\Sharpdis.DataStructure\obj\Debug\netstandard2.1\Sharpdis.DataStructure.csproj.AssemblyReference.cache
+D:\daima\sharpdis\Sharpdis\Sharpdis.DataStructure\obj\Debug\netstandard2.1\Sharpdis.DataStructure.GeneratedMSBuildEditorConfig.editorconfig
+D:\daima\sharpdis\Sharpdis\Sharpdis.DataStructure\obj\Debug\netstandard2.1\Sharpdis.DataStructure.AssemblyInfoInputs.cache
+D:\daima\sharpdis\Sharpdis\Sharpdis.DataStructure\obj\Debug\netstandard2.1\Sharpdis.DataStructure.AssemblyInfo.cs
+D:\daima\sharpdis\Sharpdis\Sharpdis.DataStructure\obj\Debug\netstandard2.1\Sharpdis.DataStructure.csproj.CoreCompileInputs.cache
+D:\daima\sharpdis\Sharpdis\Sharpdis.DataStructure\bin\Debug\netstandard2.1\Sharpdis.DataStructure.deps.json
+D:\daima\sharpdis\Sharpdis\Sharpdis.DataStructure\bin\Debug\netstandard2.1\Sharpdis.DataStructure.dll
+D:\daima\sharpdis\Sharpdis\Sharpdis.DataStructure\bin\Debug\netstandard2.1\Sharpdis.DataStructure.pdb
+D:\daima\sharpdis\Sharpdis\Sharpdis.DataStructure\obj\Debug\netstandard2.1\Sharpdis.DataStructure.dll
+D:\daima\sharpdis\Sharpdis\Sharpdis.DataStructure\obj\Debug\netstandard2.1\Sharpdis.DataStructure.pdb
+D:\daima\sharpdis\Sharpdis\Sharpdis.DataStructure\bin\Debug\netstandard2.1\Sharpdis.Common.dll
+D:\daima\sharpdis\Sharpdis\Sharpdis.DataStructure\bin\Debug\netstandard2.1\Sharpdis.Common.pdb
+D:\daima\sharpdis\Sharpdis\Sharpdis.DataStructure\obj\Debug\netstandard2.1\Sharpdis.DataStructure.csproj.CopyComplete
+D:\daima\sharpdis\Sharpdis\Sharpdis.DataStructure\bin\Debug\netstandard2.1\Sharpdis.Untils.dll
+D:\daima\sharpdis\Sharpdis\Sharpdis.DataStructure\bin\Debug\netstandard2.1\Sharpdis.Untils.pdb

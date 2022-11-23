@@ -1,8 +1,26 @@
 {
   "version": 2,
-  "dgSpecHash": "1uEcoDTbfQPKsBLdsW74mGNyueAXqN63hzrRCojgnI8MHzHelHGmYUxXF0zWns0Onmkj4m70ec3Yo+7WT70Tag==",
+  "dgSpecHash": "IXJIHPSskrN49B3Nn1ZErWLOVcZy6g+dxF2CP2xGRZ42E3q5sahCt5BjkMAItdXOMWyvxVN4BIU3VWcSYOAUiw==",
   "success": true,
   "projectFilePath": "D:\\daima\\sharpdis\\Sharpdis\\Sharpdis.Net\\Sharpdis.Net.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\Administrator\\.nuget\\packages\\dotnetty.buffers\\0.7.5\\dotnetty.buffers.0.7.5.nupkg.sha512",
+    "C:\\Users\\Administrator\\.nuget\\packages\\dotnetty.codecs\\0.7.5\\dotnetty.codecs.0.7.5.nupkg.sha512",
+    "C:\\Users\\Administrator\\.nuget\\packages\\dotnetty.common\\0.7.5\\dotnetty.common.0.7.5.nupkg.sha512",
+    "C:\\Users\\Administrator\\.nuget\\packages\\dotnetty.handlers\\0.7.5\\dotnetty.handlers.0.7.5.nupkg.sha512",
+    "C:\\Users\\Administrator\\.nuget\\packages\\dotnetty.transport\\0.7.5\\dotnetty.transport.0.7.5.nupkg.sha512",
+    "C:\\Users\\Administrator\\.nuget\\packages\\microsoft.extensions.dependencyinjection\\5.0.0\\microsoft.extensions.dependencyinjection.5.0.0.nupkg.sha512",
+    "C:\\Users\\Administrator\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\5.0.0\\microsoft.extensions.dependencyinjection.abstractions.5.0.0.nupkg.sha512",
+    "C:\\Users\\Administrator\\.nuget\\packages\\microsoft.extensions.logging\\5.0.0\\microsoft.extensions.logging.5.0.0.nupkg.sha512",
+    "C:\\Users\\Administrator\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\5.0.0\\microsoft.extensions.logging.abstractions.5.0.0.nupkg.sha512",
+    "C:\\Users\\Administrator\\.nuget\\packages\\microsoft.extensions.options\\5.0.0\\microsoft.extensions.options.5.0.0.nupkg.sha512",
+    "C:\\Users\\Administrator\\.nuget\\packages\\microsoft.extensions.primitives\\5.0.0\\microsoft.extensions.primitives.5.0.0.nupkg.sha512",
+    "C:\\Users\\Administrator\\.nuget\\packages\\system.buffers\\4.5.1\\system.buffers.4.5.1.nupkg.sha512",
+    "C:\\Users\\Administrator\\.nuget\\packages\\system.collections.immutable\\1.5.0\\system.collections.immutable.1.5.0.nupkg.sha512",
+    "C:\\Users\\Administrator\\.nuget\\packages\\system.diagnostics.diagnosticsource\\5.0.0\\system.diagnostics.diagnosticsource.5.0.0.nupkg.sha512",
+    "C:\\Users\\Administrator\\.nuget\\packages\\system.memory\\4.5.4\\system.memory.4.5.4.nupkg.sha512",
+    "C:\\Users\\Administrator\\.nuget\\packages\\system.numerics.vectors\\4.4.0\\system.numerics.vectors.4.4.0.nupkg.sha512",
+    "C:\\Users\\Administrator\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\5.0.0\\system.runtime.compilerservices.unsafe.5.0.0.nupkg.sha512"
+  ],
   "logs": []
 }
