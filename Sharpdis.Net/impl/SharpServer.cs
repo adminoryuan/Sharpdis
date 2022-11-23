@@ -18,8 +18,6 @@ namespace Sharpdis.Net.impl
 
     public class SharpServer :  ISharpdisServer
     {
-
-
         public async void Start(int port = 6379)
         {
             var boosgroup= new MultithreadEventLoopGroup(3);
