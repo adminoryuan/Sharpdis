@@ -8,12 +8,14 @@ namespace Sharpdis.Common.Entity
     {
         private string _headers;
         private string[] cmd;
-
-        public RespRequestEntity(string headers, string[] body)
+        private byte[] _respBody;
+        public RespRequestEntity(string headers, string[] body, byte[] respBody)
         {
             this.headers = headers;
             this.body = body;
+            this._respBody = respBody;   
         }
+        public byte[] respBody { get { return _respBody; } }
 
         public string headers { get { return _headers; } set { _headers = value; } }
 

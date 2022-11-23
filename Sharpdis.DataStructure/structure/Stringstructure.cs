@@ -17,7 +17,9 @@ namespace Sharpdis.DataStructure.structure
             int res;
             if (!int.TryParse(_val, out res))
                 return false;
+
             _val=Convert.ToString(++res) ;
+            
             return true;
         }
         public string get()

@@ -6,6 +6,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\Sharpdis.DataStructure\Sharpdis.DataStructure.csproj" />
     <ProjectReference Include="..\Sharpdis.Net\Sharpdis.Net.csproj" />
     <ProjectReference Include="..\Sharpdis.Untils\Sharpdis.Untils.csproj" />
   </ItemGroup>

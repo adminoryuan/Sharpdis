@@ -246,6 +246,16 @@
           "bin/placeholder/Sharpdis.DataStructure.dll": {}
         }
       },
+      "Sharpdis.Log/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.1",
+        "compile": {
+          "bin/placeholder/Sharpdis.Log.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Sharpdis.Log.dll": {}
+        }
+      },
       "Sharpdis.Net/1.0.0": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.1",
@@ -257,6 +267,7 @@
           "DotNetty.Transport": "0.7.5",
           "Sharpdis.Common": "1.0.0",
           "Sharpdis.DataStructure": "1.0.0",
+          "Sharpdis.Log": "1.0.0",
           "Sharpdis.Untils": "1.0.0"
         },
         "compile": {
@@ -600,6 +611,11 @@
       "path": "../Sharpdis.DataStructure/Sharpdis.DataStructure.csproj",
       "msbuildProject": "../Sharpdis.DataStructure/Sharpdis.DataStructure.csproj"
     },
+    "Sharpdis.Log/1.0.0": {
+      "type": "project",
+      "path": "../Sharpdis.Log/Sharpdis.Log.csproj",
+      "msbuildProject": "../Sharpdis.Log/Sharpdis.Log.csproj"
+    },
     "Sharpdis.Net/1.0.0": {
       "type": "project",
       "path": "../Sharpdis.Net/Sharpdis.Net.csproj",
@@ -613,6 +629,7 @@
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v3.1": [
+      "Sharpdis.DataStructure >= 1.0.0",
       "Sharpdis.Net >= 1.0.0",
       "Sharpdis.Untils >= 1.0.0"
     ]
@@ -644,6 +661,9 @@
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
           "projectReferences": {
+            "D:\\daima\\sharpdis\\Sharpdis\\Sharpdis.DataStructure\\Sharpdis.DataStructure.csproj": {
+              "projectPath": "D:\\daima\\sharpdis\\Sharpdis\\Sharpdis.DataStructure\\Sharpdis.DataStructure.csproj"
+            },
             "D:\\daima\\sharpdis\\Sharpdis\\Sharpdis.Net\\Sharpdis.Net.csproj": {
               "projectPath": "D:\\daima\\sharpdis\\Sharpdis\\Sharpdis.Net\\Sharpdis.Net.csproj"
             },

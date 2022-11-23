@@ -15,3 +15,5 @@ D:\daima\sharpdis\Sharpdis\Sharpdis.Net\bin\Debug\netstandard2.1\Sharpdis.Untils
 D:\daima\sharpdis\Sharpdis\Sharpdis.Net\bin\Debug\netstandard2.1\Sharpdis.Untils.pdb
 D:\daima\sharpdis\Sharpdis\Sharpdis.Net\bin\Debug\netstandard2.1\Sharpdis.Common.dll
 D:\daima\sharpdis\Sharpdis\Sharpdis.Net\bin\Debug\netstandard2.1\Sharpdis.Common.pdb
+D:\daima\sharpdis\Sharpdis\Sharpdis.Net\bin\Debug\netstandard2.1\Sharpdis.Log.dll
+D:\daima\sharpdis\Sharpdis\Sharpdis.Net\bin\Debug\netstandard2.1\Sharpdis.Log.pdb

@@ -68,7 +68,7 @@ namespace Sharpdis.DataStructure.structure
 
         public string[] lrange(int start,int stop)
         {
-            int range = stop - start;
+           int range = stop - start;
            var last= link.First;
            while (last != null && start>0)
            {

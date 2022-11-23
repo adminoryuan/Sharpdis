@@ -16,6 +16,7 @@
           "DotNetty.Transport": "0.7.5",
           "Sharpdis.Common": "1.0.0",
           "Sharpdis.DataStructure": "1.0.0",
+          "Sharpdis.Log": "1.0.0",
           "Sharpdis.Untils": "1.0.0"
         },
         "runtime": {
@@ -224,6 +225,11 @@
           "Sharpdis.DataStructure.dll": {}
         }
       },
+      "Sharpdis.Log/1.0.0": {
+        "runtime": {
+          "Sharpdis.Log.dll": {}
+        }
+      },
       "Sharpdis.Untils/1.0.0": {
         "dependencies": {
           "Sharpdis.Common": "1.0.0"
@@ -365,6 +371,11 @@
       "sha512": ""
     },
     "Sharpdis.DataStructure/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Sharpdis.Log/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

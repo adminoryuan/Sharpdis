@@ -34,3 +34,5 @@ D:\daima\sharpdis\Sharpdis\Sharpdis.App\bin\Debug\netcoreapp3.1\Sharpdis.DataStr
 D:\daima\sharpdis\Sharpdis\Sharpdis.App\bin\Debug\netcoreapp3.1\Sharpdis.DataStructure.pdb
 D:\daima\sharpdis\Sharpdis\Sharpdis.App\bin\Debug\netcoreapp3.1\Sharpdis.Common.dll
 D:\daima\sharpdis\Sharpdis\Sharpdis.App\bin\Debug\netcoreapp3.1\Sharpdis.Common.pdb
+D:\daima\sharpdis\Sharpdis\Sharpdis.App\bin\Debug\netcoreapp3.1\Sharpdis.Log.dll
+D:\daima\sharpdis\Sharpdis\Sharpdis.App\bin\Debug\netcoreapp3.1\Sharpdis.Log.pdb

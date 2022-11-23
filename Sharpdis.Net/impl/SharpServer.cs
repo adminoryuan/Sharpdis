@@ -21,7 +21,7 @@ namespace Sharpdis.Net.impl
 
         public async void Start(int port = 6379)
         {
-            var boosgroup= new MultithreadEventLoopGroup(4);
+            var boosgroup= new MultithreadEventLoopGroup(3);
             var workgroup = new MultithreadEventLoopGroup(1);
             ServerBootstrap bootstrap = new ServerBootstrap();
             var handle=new SharpdisHandle();
@@ -35,18 +35,17 @@ namespace Sharpdis.Net.impl
                 .Handler(new LoggingHandler())
                 .ChildHandler(new ActionChannelInitializer<ISocketChannel>(chanle =>
                 {
-                  
+                   
                     var pipelin= chanle.Pipeline;
                     pipelin.AddLast(new RedisRespDecoder());
                     pipelin.AddLast(new RedisRespEncoder());
-
                     pipelin.AddLast(new SharpdisHandle());
                 }));
-            Console.WriteLine("Sharpdis Server start：[6379]");
 
             init();
-          
-            var chanle=await bootstrap.BindAsync(6379);
+            Console.WriteLine("Sharpdis Server start：[6379]");
+
+            var chanle =await bootstrap.BindAsync(6379);
             
         }
         public void init()
