@@ -11,7 +11,7 @@ namespace Sharpdis.DataStructure
     /// <summary>
     /// list命令的具体实现
     /// </summary>
-    public static class List
+    public static class ListCmd
     { 
         public static RespResEntity lLen(string[] args)
         {
@@ -97,6 +97,7 @@ namespace Sharpdis.DataStructure
                 return new RespResEntity(false, "wrong number of arguments for 'lrange' command");
             }
             string key = args[1];
+
             int startindex,stopindex;
             if (!int.TryParse(args[2],out startindex) || !int.TryParse(args[3],out stopindex))
             {
@@ -105,7 +106,7 @@ namespace Sharpdis.DataStructure
             return new RespResEntity(true, Database.CrateStrucutr<ListStucture>(key).lrange(startindex,stopindex));
 
         }
-        static List()
+        static ListCmd()
         {
         }
 
