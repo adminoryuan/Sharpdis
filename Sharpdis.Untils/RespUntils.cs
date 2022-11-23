@@ -20,6 +20,11 @@ namespace Sharpdis.Untils
         {
             return new RespResEntity(true, "nil");
         }
+
+        public static RespResEntity getOkRes()
+        {
+            return new RespResEntity(true, "ok");
+        }
         public static bool ChechCmd(string[] cmd)
         {
             return true;

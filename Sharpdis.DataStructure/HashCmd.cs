@@ -7,7 +7,7 @@ using System.Text;
 
 namespace Sharpdis.DataStructure
 {
-    public class Hash
+    public class HashCmd
     {
         public static RespResEntity hget(string[] cmd)
         {
