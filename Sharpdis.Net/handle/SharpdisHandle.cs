@@ -13,10 +13,10 @@ namespace Sharpdis.Net.handle
 
     public class SharpdisHandle : SimpleChannelInboundHandler<RespRequestEntity>  
     {
-        // public override bool IsSharable => true;
-
-        private absLogger absLog=AofLogger.getAofInstance();
-        
+                   
+        /// <summary>
+        /// 执行命令的实例
+        /// </summary>
         private ICommand cmd = ICommand.GetCommand();
 
         protected override void ChannelRead0(IChannelHandlerContext ctx, RespRequestEntity req)
@@ -30,11 +30,7 @@ namespace Sharpdis.Net.handle
             }
 
             var res= cmd.execute(req);
-            if(res.IsSucess && LoggerUntils.IsWriteCmd(req.headers))
-            {
-                Console.WriteLine("aof 写入"+req.respBody.Length);
-                absLog.WriteLog(req.respBody);
-            }
+            
             ctx.Channel.WriteAndFlushAsync(res);
         }
         public override void ChannelInactive(IChannelHandlerContext context)

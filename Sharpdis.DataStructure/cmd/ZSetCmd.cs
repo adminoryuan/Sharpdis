@@ -17,7 +17,9 @@ namespace Sharpdis.DataStructure.cmd
                 return RespResUntils.getArgsError();
             }
             var l = Database.getStrucutr(cmd[1]);
+            
             if (l == null) return new RespResEntity(false, "nil");
+
             return new RespResEntity(true, ((ZSetStructure)l).ZRange(min, max));
         }
         public static RespResEntity ZAdd(string[] cmd)
@@ -28,12 +30,16 @@ namespace Sharpdis.DataStructure.cmd
 
             }
             var l = Database.getStrucutr(cmd[1]);
+            
             if (l == null) return new RespResEntity(false, "nil");
+
 
             int index = 2;
 
             var zsetStr = (ZSetStructure)l;
             List<SkipNode> args = new List<SkipNode>();
+
+            // 拆分命令 保证命令正确
             while (index < cmd.Length)
             {
                 int score = 0;
@@ -43,6 +49,7 @@ namespace Sharpdis.DataStructure.cmd
                 }
                 args.Add(new SkipNode(score, cmd[index++]));
             }
+            //保存数据
             args.ForEach(new Action<SkipNode>(a =>
             {
                 zsetStr.zadd(a);

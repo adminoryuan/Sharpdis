@@ -3,7 +3,10 @@ using System.Collections.Generic;
 using System.Text;
 
 namespace Sharpdis.Common.Entity
-{
+{   
+    /// <summary>
+    /// 描述一个返回结果
+    /// </summary>
     public class RespResEntity
     {
         /// <summary>

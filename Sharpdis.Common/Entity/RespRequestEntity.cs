@@ -3,7 +3,10 @@ using System.Collections.Generic;
 using System.Text;
 
 namespace Sharpdis.Common.Entity
-{
+{   
+    /// <summary>
+    /// 描述一个请求
+    /// </summary>
     public class RespRequestEntity
     {
         /// <summary>
