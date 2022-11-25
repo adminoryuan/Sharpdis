@@ -1,5 +1,12 @@
 # Sharpdis
-- # Sharpdis 是基于c# 实现的 redis
+- # Sharpdis 是基于c# 实现的 redis 服务端
+- ![效果图](https://github.com/adminoryuan/img/blob/master/a.png)
+- # 如何使用
+- 下载本仓库
+- 运行Sharpdis.app 屏幕输出Sharpdis 则表示服务端运行成功
+- 打开redis-cli 即可链接服务端
+
+- 
  - # 数据结构
  - [x] String
  - [x] Set
@@ -11,7 +18,7 @@
  - # 网络模型
  - [x] 采用reactor模型
  - # 持久化
- - [ ] Aof
+ - [x] Aof
  - [ ] RDB
 - # 集群
 -  [ ] 使用raft 构建集群
