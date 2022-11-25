@@ -8,3 +8,6 @@ D:\daima\sharpdis\Sharpdis\Sharpdis.Log\obj\Debug\netstandard2.1\Sharpdis.Log.As
 D:\daima\sharpdis\Sharpdis\Sharpdis.Log\obj\Debug\netstandard2.1\Sharpdis.Log.csproj.CoreCompileInputs.cache
 D:\daima\sharpdis\Sharpdis\Sharpdis.Log\obj\Debug\netstandard2.1\Sharpdis.Log.dll
 D:\daima\sharpdis\Sharpdis\Sharpdis.Log\obj\Debug\netstandard2.1\Sharpdis.Log.pdb
+D:\daima\sharpdis\Sharpdis\Sharpdis.Log\bin\Debug\netstandard2.1\Sharpdis.Common.dll
+D:\daima\sharpdis\Sharpdis\Sharpdis.Log\bin\Debug\netstandard2.1\Sharpdis.Common.pdb
+D:\daima\sharpdis\Sharpdis\Sharpdis.Log\obj\Debug\netstandard2.1\Sharpdis.Log.csproj.CopyComplete

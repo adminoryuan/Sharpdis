@@ -22,8 +22,8 @@ namespace Sharpdis.App
             Console.WriteLine(banner);
 
 
-            while (true)
-                Console.ReadLine();
+            var sync=new CountdownEvent(1);
+            sync.Wait();
         }
          
     }

@@ -15,7 +15,7 @@ namespace Sharpdis.Net.codec
                                         RespResEntity message, 
                                         IByteBuffer output){
             string prefix = "";
-              if (message.Res is null || message.Res is string)
+            if (message.Res is null || message.Res is string)
             {
                 prefix += message.IsSucess ? "+" : "-";
                 prefix += message.Res == null ? "nil" : message.Res;
