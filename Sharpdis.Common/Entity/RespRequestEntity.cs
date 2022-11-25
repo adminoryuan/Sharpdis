@@ -6,8 +6,16 @@ namespace Sharpdis.Common.Entity
 {
     public class RespRequestEntity
     {
+        /// <summary>
+        /// 命令行头部命令
+        /// </summary>
         private string _headers;
+        
+        /// <summary>
+        /// 命令行命令与命令行参数
+        /// </summary>
         private string[] cmd;
+
         private byte[] _respBody;
         public RespRequestEntity(string headers, string[] body, byte[] respBody)
         {

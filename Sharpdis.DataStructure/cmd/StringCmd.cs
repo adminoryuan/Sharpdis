@@ -5,9 +5,9 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace Sharpdis.DataStructure
+namespace Sharpdis.DataStructure.cmd
 {
-    public static class StringCmd
+     static class StringCmd
     {
         public static RespResEntity Set(string[] cmd)
         {
@@ -20,11 +20,11 @@ namespace Sharpdis.DataStructure
         {
             if (cmd.Length < 2) return RespResUntils.getArgsError();
             string key = cmd[1];
-            var l= Database.getStrucutr(key);
+            var l = Database.getStrucutr(key);
             if (l == null) return new RespResEntity(false, "nil");
             bool res = ((StringStructure)l).incr();
 
-            return new RespResEntity(res, res?"ok":"convent val error");
+            return new RespResEntity(res, res ? "ok" : "convent val error");
 
         }
         public static RespResEntity Get(string[] cmd)
@@ -44,7 +44,7 @@ namespace Sharpdis.DataStructure
 
             CmdTable.RegistCmd("set", Set);
 
-            CmdTable.RegistCmd("incr",Incr);
+            CmdTable.RegistCmd("incr", Incr);
         }
     }
 }

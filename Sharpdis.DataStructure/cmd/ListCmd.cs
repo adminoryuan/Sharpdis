@@ -5,14 +5,14 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace Sharpdis.DataStructure
+namespace Sharpdis.DataStructure.cmd
 {
 
     /// <summary>
     /// list命令的具体实现
     /// </summary>
-    public static class ListCmd
-    { 
+     static class ListCmd
+    {
         public static RespResEntity lLen(string[] args)
         {
             string key = args[1];
@@ -20,10 +20,10 @@ namespace Sharpdis.DataStructure
             var l = Database.getStrucutr(key);
             if (l == null)
             {
-                return new RespResEntity(false,"nil!");
+                return new RespResEntity(false, "nil!");
             }
             string value = Convert.ToString(((ListStucture)l).Len());
-        
+
             return new RespResEntity(true, value);
         }
         public static RespResEntity LPop(string[] args)
@@ -38,7 +38,7 @@ namespace Sharpdis.DataStructure
             }
             return new RespResEntity(true, ((ListStucture)l).LPop());
         }
-        public static  RespResEntity RPop(string[] args)
+        public static RespResEntity RPop(string[] args)
         {
             if (args.Length < 1) return new RespResEntity(false, "wrong number of arguments for 'lPush' command ");
 
@@ -58,8 +58,8 @@ namespace Sharpdis.DataStructure
             }
             string key = args[1];
             string val = args[2];
-            
-            return new RespResEntity(true, Database.CrateStrucutr<ListStucture>(key).LPush(args.Skip(2).Take(args.Length-2).ToArray())?"ok":"error");
+
+            return new RespResEntity(true, Database.CrateStrucutr<ListStucture>(key).LPush(args.Skip(2).Take(args.Length - 2).ToArray()) ? "ok" : "error");
         }
 
         public static RespResEntity RPush(string[] args)
@@ -70,7 +70,7 @@ namespace Sharpdis.DataStructure
             }
             string key = args[1];
 
-            return new RespResEntity(true, Database.CrateStrucutr<ListStucture>(key).RPush(args.Skip(2).Take(args.Length - 2).ToArray())?"ok":"err");
+            return new RespResEntity(true, Database.CrateStrucutr<ListStucture>(key).RPush(args.Skip(2).Take(args.Length - 2).ToArray()) ? "ok" : "err");
         }
         public static RespResEntity LIndex(string[] args)
         {
@@ -79,8 +79,8 @@ namespace Sharpdis.DataStructure
                 return new RespResEntity(false, "wrong number of arguments for 'LIndex' command");
             }
             string key = args[1];
-            int val = -1; 
-            if(!int.TryParse(args[2],out val))
+            int val = -1;
+            if (!int.TryParse(args[2], out val))
             {
                 return new RespResEntity(false, "wrong number of arguments for 'LIndex' command");
 
@@ -98,12 +98,12 @@ namespace Sharpdis.DataStructure
             }
             string key = args[1];
 
-            int startindex,stopindex;
-            if (!int.TryParse(args[2],out startindex) || !int.TryParse(args[3],out stopindex))
+            int startindex, stopindex;
+            if (!int.TryParse(args[2], out startindex) || !int.TryParse(args[3], out stopindex))
             {
                 return new RespResEntity(false, "wrong number of arguments for 'lRange' command");
             }
-            return new RespResEntity(true, Database.CrateStrucutr<ListStucture>(key).lrange(startindex,stopindex));
+            return new RespResEntity(true, Database.CrateStrucutr<ListStucture>(key).lrange(startindex, stopindex));
 
         }
         static ListCmd()
@@ -119,7 +119,7 @@ namespace Sharpdis.DataStructure
             CmdTable.RegistCmd("rpop", RPop);
             CmdTable.RegistCmd("lpush", lPush);
             CmdTable.RegistCmd("lpushx", lLen);
-            CmdTable.RegistCmd("rpush",RPush);
+            CmdTable.RegistCmd("rpush", RPush);
             CmdTable.RegistCmd("rpushx", lLen);
             CmdTable.RegistCmd("lset", lLen);
             CmdTable.RegistCmd("lrem", lLen);
@@ -129,6 +129,6 @@ namespace Sharpdis.DataStructure
 
         }
 
-     
+
     }
 }

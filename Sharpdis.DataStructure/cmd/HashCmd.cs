@@ -5,9 +5,9 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace Sharpdis.DataStructure
+namespace Sharpdis.DataStructure.cmd
 {
-    public class HashCmd
+     class HashCmd
     {
         public static RespResEntity hget(string[] cmd)
         {
@@ -34,7 +34,7 @@ namespace Sharpdis.DataStructure
             string key = cmd[1];
             string hkey = cmd[2];
             string hval = cmd[3];
-            return new RespResEntity(true, ((HashStucture)Database.CrateStrucutr<HashStucture>(key)).Hset(hkey, hval));
+            return new RespResEntity(true, Database.CrateStrucutr<HashStucture>(key).Hset(hkey, hval));
         }
         public static RespResEntity hgetall(string[] cmd)
         {

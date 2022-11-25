@@ -1,4 +1,5 @@
 ﻿using Sharpdis.Common.Entity;
+using Sharpdis.DataStructure.cmd;
 using Sharpdis.DataStructure.structure;
 using System;
 using System.Collections.Generic;
@@ -12,25 +13,23 @@ namespace Sharpdis.DataStructure
     public static class CmdTable
     {
         /// <summary>
-        /// cmdKv 数量
+        /// 保存命令与func 的对应关系
         /// </summary>
-        private static readonly Dictionary<string, Func<string[], RespResEntity>> cmdKv = Init();
+        private static readonly Dictionary<string, Func<string[], RespResEntity>> cmdKv;
 
         public static int selectcmdKv = 0;
-
-        /// <summary>
-        /// 初始化
-        /// </summary>
-        /// <returns></returns>
-        private static Dictionary<string,Func<string[], RespResEntity>> Init()
+        static CmdTable()
         {
-           var cmdKvs= new Dictionary<string,Func<string[], RespResEntity>>();
-
-          
-           
-            return cmdKvs;
+            cmdKv = new Dictionary<string, Func<string[], RespResEntity>>(); 
+            //初始化所有命令
+            SysCmd.RegistCmd();
+            HashCmd.registCmd();
+            ListCmd.RegistCmd();
+            SetCmd.RegistCmd();
+            StringCmd.registCmd();
         }
 
+        
 
         /// <summary>
         /// 注册命令

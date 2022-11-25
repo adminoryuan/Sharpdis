@@ -6,8 +6,14 @@ namespace Sharpdis.Common.Entity
 {
     public class RespResEntity
     {
+        /// <summary>
+        /// 是否执行成功
+        /// </summary>
         private bool _IsSucess;
 
+        /// <summary>
+        /// 输出结果
+        /// </summary>
         private object _Res;
 
         public bool IsSucess { get { return _IsSucess; } set { _IsSucess = value; } }
