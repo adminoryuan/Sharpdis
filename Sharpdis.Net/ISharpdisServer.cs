@@ -8,7 +8,6 @@ namespace Sharpdis.Net
 {
     public interface ISharpdisServer 
     {
-
         public static ISharpdisServer GetSharpdis()
         {
             return new SharpServer();

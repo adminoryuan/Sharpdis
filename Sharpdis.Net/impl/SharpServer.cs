@@ -31,7 +31,7 @@ namespace Sharpdis.Net.impl
                  .Option(ChannelOption.TcpNodelay,true) 
                 .Option(ChannelOption.SoBacklog, 1024) //阻塞队列
                 .Option(ChannelOption.SoKeepalive,true) 
-                .Handler(new LoggingHandler()) 
+                .Handler(new LoggingHandler(LogLevel.INFO)) 
                 .ChildHandler(new ActionChannelInitializer<ISocketChannel>(chanle =>
                 {
                    
