@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Sharpdis.DataStructure.structure
 {
-    public class ZSetStructure:Structure
+    public class ZSetStructure: Structure
     {
         private SkipList skip = new SkipList();
 
@@ -18,9 +18,7 @@ namespace Sharpdis.DataStructure.structure
             return skip.ZRank(val);
         }
         public Array ZRange(int min,int max)
-        {   
-            
-            
+        {    
             return skip.ZRange(min, max);
         }
     }

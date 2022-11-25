@@ -20,18 +20,18 @@ namespace Sharpdis.Net.impl
     {
         public async void Start(int port = 6379)
         {
-            var boosgroup= new MultithreadEventLoopGroup(3);
-            var workgroup = new MultithreadEventLoopGroup(1);
+            var boosgroup= new MultithreadEventLoopGroup(3); //boss 线程
+            var workgroup = new MultithreadEventLoopGroup(1); //work 线程
             ServerBootstrap bootstrap = new ServerBootstrap();
             var handle=new SharpdisHandle();
             bootstrap.
                 Group(boosgroup, workgroup)
                  .Channel<TcpServerSocketChannel>()
                  .Option(ChannelOption.SoReuseport,true)
-                 .Option(ChannelOption.TcpNodelay,true)
-                .Option(ChannelOption.SoBacklog, 1024)
-                .Option(ChannelOption.SoKeepalive,true)
-                .Handler(new LoggingHandler())
+                 .Option(ChannelOption.TcpNodelay,true) 
+                .Option(ChannelOption.SoBacklog, 1024) //阻塞队列
+                .Option(ChannelOption.SoKeepalive,true) 
+                .Handler(new LoggingHandler()) 
                 .ChildHandler(new ActionChannelInitializer<ISocketChannel>(chanle =>
                 {
                    
