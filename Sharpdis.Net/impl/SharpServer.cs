@@ -42,7 +42,7 @@ namespace Sharpdis.Net.impl
                 }));
 
             
-            Console.WriteLine("Sharpdis Server start：[6379]");
+            Console.WriteLine("[Sharpdis] Server start [6379]");
 
             var chanle =await bootstrap.BindAsync(6379);
             
