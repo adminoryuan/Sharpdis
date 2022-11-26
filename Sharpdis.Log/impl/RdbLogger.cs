@@ -6,10 +6,16 @@ using System.Text;
 namespace Sharpdis.Log.impl
 {
     public class RdbLogger : absLogger
-    {
+    {   
+        
         public RdbLogger(string fileName) : base(fileName)
         {
 
+        }
+
+        public override void AppendLogAsync(RespRequestEntity req)
+        {
+            throw new NotImplementedException();
         }
 
         public override void LoadLog(Action<RespRequestEntity> func)
@@ -17,9 +23,6 @@ namespace Sharpdis.Log.impl
             throw new NotImplementedException();
         }
 
-        public override void WriteLog(byte[] cmd)
-        {
-            throw new NotImplementedException();
-        }
+        
     }
 }

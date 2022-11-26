@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Sharpdis.Common.Entity;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Text;
@@ -23,14 +24,14 @@ namespace Sharpdis.Log
                     stream.WriteLine(Encoding.UTF8.GetString(body));
                     await stream.FlushAsync();
                 }
-            _file.Close();
+                _file.Close();
 
         }
         /// <summary>
         /// 写入日志
         /// </summary>
         /// <param name="cmd"></param>
-        public abstract void WriteLog(byte[] cmd);
+        public abstract void AppendLogAsync(RespRequestEntity req);
 
         /// <summary>
         /// 加载日志

@@ -12,14 +12,14 @@ namespace Sharpdis.Common.Entity
         /// <summary>
         /// 命令行头部命令
         /// </summary>
-        private string _headers;
+        private string _headers=null;
         
         /// <summary>
         /// 命令行命令与命令行参数
         /// </summary>
-        private string[] cmd;
+        private string[] _body=null;
 
-        private byte[] _respBody;
+        private byte[] _respBody=null;
         public RespRequestEntity(string headers, string[] body, byte[] respBody)
         {
             this.headers = headers;
@@ -30,7 +30,7 @@ namespace Sharpdis.Common.Entity
 
         public string headers { get { return _headers; } set { _headers = value; } }
 
-        public string[] body { get { return cmd; } set { cmd = value; } }
+        public string[] body { get { return _body; } set { _body = value; } }
     }
 
 }

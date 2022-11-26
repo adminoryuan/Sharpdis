@@ -1,9 +1,12 @@
 ﻿using DotNetty.Buffers;
+using Sharpdis.Common.Entity;
 using Sharpdis.Log.parser;
+using Sharpdis.Untils;
 using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Text;
+using System.Threading.Tasks;
 using static System.Net.WebRequestMethods;
 using File = System.IO.File;
 
@@ -25,6 +28,12 @@ namespace Sharpdis.Log.impl
             return instance;
         }
 
+        public override async void AppendLogAsync(RespRequestEntity req)
+        {
+            
+             await WriteAsync(req.respBody);
+        }
+
         /// <summary>
         /// 加载aof 日志
         /// </summary>
@@ -42,10 +51,6 @@ namespace Sharpdis.Log.impl
             RespParser.Parser(buf, func);
 
         }
-
-        public override async void WriteLog(byte[] cmd)
-        {
-           await WriteAsync(cmd);
-        }
+ 
     }
 }

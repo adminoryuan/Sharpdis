@@ -216,6 +216,19 @@
         "runtime": {
           "bin/placeholder/Sharpdis.Common.dll": {}
         }
+      },
+      "Sharpdis.Untils/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.1",
+        "dependencies": {
+          "Sharpdis.Common": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Sharpdis.Untils.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Sharpdis.Untils.dll": {}
+        }
       }
     }
   },
@@ -549,12 +562,18 @@
       "type": "project",
       "path": "../Sharpdis.Common/Sharpdis.Common.csproj",
       "msbuildProject": "../Sharpdis.Common/Sharpdis.Common.csproj"
+    },
+    "Sharpdis.Untils/1.0.0": {
+      "type": "project",
+      "path": "../Sharpdis.Untils/Sharpdis.Untils.csproj",
+      "msbuildProject": "../Sharpdis.Untils/Sharpdis.Untils.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETStandard,Version=v2.1": [
       "DotNetty.Buffers >= 0.7.5",
-      "Sharpdis.Common >= 1.0.0"
+      "Sharpdis.Common >= 1.0.0",
+      "Sharpdis.Untils >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -586,6 +605,9 @@
           "projectReferences": {
             "D:\\daima\\sharpdis\\Sharpdis\\Sharpdis.Common\\Sharpdis.Common.csproj": {
               "projectPath": "D:\\daima\\sharpdis\\Sharpdis\\Sharpdis.Common\\Sharpdis.Common.csproj"
+            },
+            "D:\\daima\\sharpdis\\Sharpdis\\Sharpdis.Untils\\Sharpdis.Untils.csproj": {
+              "projectPath": "D:\\daima\\sharpdis\\Sharpdis\\Sharpdis.Untils\\Sharpdis.Untils.csproj"
             }
           }
         }

@@ -73,13 +73,19 @@ namespace Sharpdis.DataStructure
             }
             return (T)val;
         }
+
+        public int GetSelectIndex()
+        {
+            return selectIndex;
+        }
+
         /// <summary>
         /// 不存在则返回null
         /// </summary>
         /// <param name="key">建</param>
         /// <returns></returns>
-        
-        public  Structure getStrucutr(string key)
+
+        public  Structure getStrucutr(string key, int selectIndex)
         {
             return dbs[selectIndex].GetValueOrDefault(key, null);
         }

@@ -25,7 +25,7 @@ namespace Sharpdis.DataStructure.cmd
             if (cmd.Length < 2) return RespResUntils.getArgsError();
             string key = cmd[1];
 
-            var l =  CmdTable.db.getStrucutr(key);
+            var l =  CmdTable.db.getStrucutr(key, CmdTable.db.GetSelectIndex());
 
             if (l == null) return RespResUntils.getNilRes();
 

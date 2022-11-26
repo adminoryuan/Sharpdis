@@ -18,7 +18,7 @@ namespace Sharpdis.DataStructure.cmd
 
             string key = cmd[1];
             string hkey = cmd[2];
-            var l =  CmdTable.db.getStrucutr(key);
+            var l =  CmdTable.db.getStrucutr(key, CmdTable.db.GetSelectIndex());
 
             if (l == null) return new RespResEntity(false, "nil");
 
@@ -43,7 +43,7 @@ namespace Sharpdis.DataStructure.cmd
                 return RespResUntils.getArgsError();
             }
             string key = cmd[1];
-            var l =  CmdTable.db.getStrucutr(key);
+            var l =  CmdTable.db.getStrucutr(key, CmdTable.db.GetSelectIndex());
 
             if (l == null) return new RespResEntity(false, "nil");
 
@@ -57,7 +57,7 @@ namespace Sharpdis.DataStructure.cmd
             }
             string key = cmd[1];
             string hkey = cmd[2];
-            var l =  CmdTable.db.getStrucutr(key);
+            var l =  CmdTable.db.getStrucutr(key, CmdTable.db.GetSelectIndex());
 
             if (l == null) return new RespResEntity(false, "nil");
 
@@ -72,7 +72,7 @@ namespace Sharpdis.DataStructure.cmd
                 return RespResUntils.getArgsError();
             }
             string key = cmd[1];
-            var l =  CmdTable.db.getStrucutr(key);
+            var l =  CmdTable.db.getStrucutr(key, CmdTable.db.GetSelectIndex());
 
             if (l == null) return new RespResEntity(false, "nil");
 
@@ -86,7 +86,7 @@ namespace Sharpdis.DataStructure.cmd
                 return RespResUntils.getArgsError();
             }
             string key = cmd[1];
-            var l =  CmdTable.db.getStrucutr(key);
+            var l =  CmdTable.db.getStrucutr(key, CmdTable.db.GetSelectIndex());
 
             if (l == null) return new RespResEntity(false, "nil");
 

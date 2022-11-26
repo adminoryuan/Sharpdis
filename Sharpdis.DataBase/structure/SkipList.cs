@@ -134,7 +134,7 @@ namespace Sharpdis.DataStructure.structure
                     temp = temp.right;
                 }
             }
-            while (temp.down != null) temp = temp.down;
+            while (temp!=null&& temp.down != null) temp = temp.down;
 
             var list = new List<string>();
 
