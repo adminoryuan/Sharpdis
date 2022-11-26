@@ -984,7 +984,7 @@
           "bin/placeholder/Sharpdis.Common.dll": {}
         }
       },
-      "Sharpdis.DataStructure/1.0.0": {
+      "Sharpdis.DataBase/1.0.0": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.1",
         "dependencies": {
@@ -992,10 +992,10 @@
           "Sharpdis.Untils": "1.0.0"
         },
         "compile": {
-          "bin/placeholder/Sharpdis.DataStructure.dll": {}
+          "bin/placeholder/Sharpdis.DataBase.dll": {}
         },
         "runtime": {
-          "bin/placeholder/Sharpdis.DataStructure.dll": {}
+          "bin/placeholder/Sharpdis.DataBase.dll": {}
         }
       },
       "Sharpdis.Untils/1.0.0": {
@@ -3999,10 +3999,10 @@
       "path": "../Sharpdis.Common/Sharpdis.Common.csproj",
       "msbuildProject": "../Sharpdis.Common/Sharpdis.Common.csproj"
     },
-    "Sharpdis.DataStructure/1.0.0": {
+    "Sharpdis.DataBase/1.0.0": {
       "type": "project",
-      "path": "../Sharpdis.DataStructure/Sharpdis.DataStructure.csproj",
-      "msbuildProject": "../Sharpdis.DataStructure/Sharpdis.DataStructure.csproj"
+      "path": "../Sharpdis.DataBase/Sharpdis.DataBase.csproj",
+      "msbuildProject": "../Sharpdis.DataBase/Sharpdis.DataBase.csproj"
     },
     "Sharpdis.Untils/1.0.0": {
       "type": "project",
@@ -4016,7 +4016,7 @@
       "NUnit >= 3.13.3",
       "NUnit.Analyzers >= 3.3.0",
       "NUnit3TestAdapter >= 4.2.1",
-      "Sharpdis.DataStructure >= 1.0.0",
+      "Sharpdis.DataBase >= 1.0.0",
       "coverlet.collector >= 3.1.2"
     ]
   },
@@ -4047,8 +4047,8 @@
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
           "projectReferences": {
-            "D:\\daima\\sharpdis\\Sharpdis\\Sharpdis.DataStructure\\Sharpdis.DataStructure.csproj": {
-              "projectPath": "D:\\daima\\sharpdis\\Sharpdis\\Sharpdis.DataStructure\\Sharpdis.DataStructure.csproj"
+            "D:\\daima\\sharpdis\\Sharpdis\\Sharpdis.DataBase\\Sharpdis.DataBase.csproj": {
+              "projectPath": "D:\\daima\\sharpdis\\Sharpdis\\Sharpdis.DataBase\\Sharpdis.DataBase.csproj"
             }
           }
         }

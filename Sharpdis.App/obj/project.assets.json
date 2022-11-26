@@ -232,7 +232,28 @@
           "bin/placeholder/Sharpdis.Common.dll": {}
         }
       },
-      "Sharpdis.DataStructure/1.0.0": {
+      "Sharpdis.Core/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.1",
+        "dependencies": {
+          "DotNetty.Buffers": "0.7.5",
+          "DotNetty.Codecs": "0.7.5",
+          "DotNetty.Common": "0.7.5",
+          "DotNetty.Handlers": "0.7.5",
+          "DotNetty.Transport": "0.7.5",
+          "Sharpdis.Common": "1.0.0",
+          "Sharpdis.DataBase": "1.0.0",
+          "Sharpdis.Log": "1.0.0",
+          "Sharpdis.Untils": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Sharpdis.Core.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Sharpdis.Core.dll": {}
+        }
+      },
+      "Sharpdis.DataBase/1.0.0": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.1",
         "dependencies": {
@@ -240,10 +261,10 @@
           "Sharpdis.Untils": "1.0.0"
         },
         "compile": {
-          "bin/placeholder/Sharpdis.DataStructure.dll": {}
+          "bin/placeholder/Sharpdis.DataBase.dll": {}
         },
         "runtime": {
-          "bin/placeholder/Sharpdis.DataStructure.dll": {}
+          "bin/placeholder/Sharpdis.DataBase.dll": {}
         }
       },
       "Sharpdis.Log/1.0.0": {
@@ -258,27 +279,6 @@
         },
         "runtime": {
           "bin/placeholder/Sharpdis.Log.dll": {}
-        }
-      },
-      "Sharpdis.Net/1.0.0": {
-        "type": "project",
-        "framework": ".NETStandard,Version=v2.1",
-        "dependencies": {
-          "DotNetty.Buffers": "0.7.5",
-          "DotNetty.Codecs": "0.7.5",
-          "DotNetty.Common": "0.7.5",
-          "DotNetty.Handlers": "0.7.5",
-          "DotNetty.Transport": "0.7.5",
-          "Sharpdis.Common": "1.0.0",
-          "Sharpdis.DataStructure": "1.0.0",
-          "Sharpdis.Log": "1.0.0",
-          "Sharpdis.Untils": "1.0.0"
-        },
-        "compile": {
-          "bin/placeholder/Sharpdis.Net.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/Sharpdis.Net.dll": {}
         }
       },
       "Sharpdis.Untils/1.0.0": {
@@ -610,20 +610,20 @@
       "path": "../Sharpdis.Common/Sharpdis.Common.csproj",
       "msbuildProject": "../Sharpdis.Common/Sharpdis.Common.csproj"
     },
-    "Sharpdis.DataStructure/1.0.0": {
+    "Sharpdis.Core/1.0.0": {
       "type": "project",
-      "path": "../Sharpdis.DataStructure/Sharpdis.DataStructure.csproj",
-      "msbuildProject": "../Sharpdis.DataStructure/Sharpdis.DataStructure.csproj"
+      "path": "../Sharpdis.Core/Sharpdis.Core.csproj",
+      "msbuildProject": "../Sharpdis.Core/Sharpdis.Core.csproj"
+    },
+    "Sharpdis.DataBase/1.0.0": {
+      "type": "project",
+      "path": "../Sharpdis.DataBase/Sharpdis.DataBase.csproj",
+      "msbuildProject": "../Sharpdis.DataBase/Sharpdis.DataBase.csproj"
     },
     "Sharpdis.Log/1.0.0": {
       "type": "project",
       "path": "../Sharpdis.Log/Sharpdis.Log.csproj",
       "msbuildProject": "../Sharpdis.Log/Sharpdis.Log.csproj"
-    },
-    "Sharpdis.Net/1.0.0": {
-      "type": "project",
-      "path": "../Sharpdis.Net/Sharpdis.Net.csproj",
-      "msbuildProject": "../Sharpdis.Net/Sharpdis.Net.csproj"
     },
     "Sharpdis.Untils/1.0.0": {
       "type": "project",
@@ -633,8 +633,8 @@
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v3.1": [
-      "Sharpdis.DataStructure >= 1.0.0",
-      "Sharpdis.Net >= 1.0.0",
+      "Sharpdis.Common >= 1.0.0",
+      "Sharpdis.Core >= 1.0.0",
       "Sharpdis.Untils >= 1.0.0"
     ]
   },
@@ -665,11 +665,11 @@
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
           "projectReferences": {
-            "D:\\daima\\sharpdis\\Sharpdis\\Sharpdis.DataStructure\\Sharpdis.DataStructure.csproj": {
-              "projectPath": "D:\\daima\\sharpdis\\Sharpdis\\Sharpdis.DataStructure\\Sharpdis.DataStructure.csproj"
+            "D:\\daima\\sharpdis\\Sharpdis\\Sharpdis.Common\\Sharpdis.Common.csproj": {
+              "projectPath": "D:\\daima\\sharpdis\\Sharpdis\\Sharpdis.Common\\Sharpdis.Common.csproj"
             },
-            "D:\\daima\\sharpdis\\Sharpdis\\Sharpdis.Net\\Sharpdis.Net.csproj": {
-              "projectPath": "D:\\daima\\sharpdis\\Sharpdis\\Sharpdis.Net\\Sharpdis.Net.csproj"
+            "D:\\daima\\sharpdis\\Sharpdis\\Sharpdis.Core\\Sharpdis.Core.csproj": {
+              "projectPath": "D:\\daima\\sharpdis\\Sharpdis\\Sharpdis.Core\\Sharpdis.Core.csproj"
             },
             "D:\\daima\\sharpdis\\Sharpdis\\Sharpdis.Untils\\Sharpdis.Untils.csproj": {
               "projectPath": "D:\\daima\\sharpdis\\Sharpdis\\Sharpdis.Untils\\Sharpdis.Untils.csproj"

@@ -59,14 +59,14 @@
         }
       }
     },
-    "D:\\daima\\sharpdis\\Sharpdis\\Sharpdis.DataStructure\\Sharpdis.DataStructure.csproj": {
+    "D:\\daima\\sharpdis\\Sharpdis\\Sharpdis.DataBase\\Sharpdis.DataBase.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\daima\\sharpdis\\Sharpdis\\Sharpdis.DataStructure\\Sharpdis.DataStructure.csproj",
-        "projectName": "Sharpdis.DataStructure",
-        "projectPath": "D:\\daima\\sharpdis\\Sharpdis\\Sharpdis.DataStructure\\Sharpdis.DataStructure.csproj",
+        "projectUniqueName": "D:\\daima\\sharpdis\\Sharpdis\\Sharpdis.DataBase\\Sharpdis.DataBase.csproj",
+        "projectName": "Sharpdis.DataBase",
+        "projectPath": "D:\\daima\\sharpdis\\Sharpdis\\Sharpdis.DataBase\\Sharpdis.DataBase.csproj",
         "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
-        "outputPath": "D:\\daima\\sharpdis\\Sharpdis\\Sharpdis.DataStructure\\obj\\",
+        "outputPath": "D:\\daima\\sharpdis\\Sharpdis\\Sharpdis.DataBase\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Administrator\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -145,8 +145,8 @@
           "netcoreapp3.1": {
             "targetAlias": "netcoreapp3.1",
             "projectReferences": {
-              "D:\\daima\\sharpdis\\Sharpdis\\Sharpdis.DataStructure\\Sharpdis.DataStructure.csproj": {
-                "projectPath": "D:\\daima\\sharpdis\\Sharpdis\\Sharpdis.DataStructure\\Sharpdis.DataStructure.csproj"
+              "D:\\daima\\sharpdis\\Sharpdis\\Sharpdis.DataBase\\Sharpdis.DataBase.csproj": {
+                "projectPath": "D:\\daima\\sharpdis\\Sharpdis\\Sharpdis.DataBase\\Sharpdis.DataBase.csproj"
               }
             }
           }

@@ -1,0 +1,15 @@
+D:\daima\sharpdis\Sharpdis\Sharpdis.DataBase\bin\Debug\netstandard2.1\Sharpdis.DataBase.deps.json
+D:\daima\sharpdis\Sharpdis\Sharpdis.DataBase\bin\Debug\netstandard2.1\Sharpdis.DataBase.dll
+D:\daima\sharpdis\Sharpdis\Sharpdis.DataBase\bin\Debug\netstandard2.1\Sharpdis.DataBase.pdb
+D:\daima\sharpdis\Sharpdis\Sharpdis.DataBase\bin\Debug\netstandard2.1\Sharpdis.Common.dll
+D:\daima\sharpdis\Sharpdis\Sharpdis.DataBase\bin\Debug\netstandard2.1\Sharpdis.Untils.dll
+D:\daima\sharpdis\Sharpdis\Sharpdis.DataBase\bin\Debug\netstandard2.1\Sharpdis.Common.pdb
+D:\daima\sharpdis\Sharpdis\Sharpdis.DataBase\bin\Debug\netstandard2.1\Sharpdis.Untils.pdb
+D:\daima\sharpdis\Sharpdis\Sharpdis.DataBase\obj\Debug\netstandard2.1\Sharpdis.DataBase.csproj.AssemblyReference.cache
+D:\daima\sharpdis\Sharpdis\Sharpdis.DataBase\obj\Debug\netstandard2.1\Sharpdis.DataBase.GeneratedMSBuildEditorConfig.editorconfig
+D:\daima\sharpdis\Sharpdis\Sharpdis.DataBase\obj\Debug\netstandard2.1\Sharpdis.DataBase.AssemblyInfoInputs.cache
+D:\daima\sharpdis\Sharpdis\Sharpdis.DataBase\obj\Debug\netstandard2.1\Sharpdis.DataBase.AssemblyInfo.cs
+D:\daima\sharpdis\Sharpdis\Sharpdis.DataBase\obj\Debug\netstandard2.1\Sharpdis.DataBase.csproj.CoreCompileInputs.cache
+D:\daima\sharpdis\Sharpdis\Sharpdis.DataBase\obj\Debug\netstandard2.1\Sharpdis.DataBase.csproj.CopyComplete
+D:\daima\sharpdis\Sharpdis\Sharpdis.DataBase\obj\Debug\netstandard2.1\Sharpdis.DataBase.dll
+D:\daima\sharpdis\Sharpdis\Sharpdis.DataBase\obj\Debug\netstandard2.1\Sharpdis.DataBase.pdb

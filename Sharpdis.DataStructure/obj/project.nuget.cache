@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "hS8RoYd5TqjLZ3nvwllgErdbHlZyXsWVP7MGn6ilJbYXUEM2AxDk3ipdjN9ubh6sfQ0oiRKGcxqe9Vcz+XWiEw==",
+  "dgSpecHash": "F8Qmtfa0XfAQHEuvCg44Wao87TpgdbeA1Fzw2uoJnWljspKsBFUhHRqOd0Kg8spNClD/Wx/gwiwNcijDUW5M2g==",
   "success": true,
-  "projectFilePath": "D:\\daima\\sharpdis\\Sharpdis\\Sharpdis.DataStructure\\Sharpdis.DataStructure.csproj",
+  "projectFilePath": "D:\\daima\\sharpdis\\Sharpdis\\Sharpdis.DataStructure\\Sharpdis.DataBase.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

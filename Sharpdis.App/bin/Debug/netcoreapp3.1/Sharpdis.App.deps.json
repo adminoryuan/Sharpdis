@@ -8,8 +8,8 @@
     ".NETCoreApp,Version=v3.1": {
       "Sharpdis.App/1.0.0": {
         "dependencies": {
-          "Sharpdis.DataStructure": "1.0.0",
-          "Sharpdis.Net": "1.0.0",
+          "Sharpdis.Common": "1.0.0",
+          "Sharpdis.Core": "1.0.0",
           "Sharpdis.Untils": "1.0.0"
         },
         "runtime": {
@@ -164,13 +164,29 @@
           "Sharpdis.Common.dll": {}
         }
       },
-      "Sharpdis.DataStructure/1.0.0": {
+      "Sharpdis.Core/1.0.0": {
+        "dependencies": {
+          "DotNetty.Buffers": "0.7.5",
+          "DotNetty.Codecs": "0.7.5",
+          "DotNetty.Common": "0.7.5",
+          "DotNetty.Handlers": "0.7.5",
+          "DotNetty.Transport": "0.7.5",
+          "Sharpdis.Common": "1.0.0",
+          "Sharpdis.DataBase": "1.0.0",
+          "Sharpdis.Log": "1.0.0",
+          "Sharpdis.Untils": "1.0.0"
+        },
+        "runtime": {
+          "Sharpdis.Core.dll": {}
+        }
+      },
+      "Sharpdis.DataBase/1.0.0": {
         "dependencies": {
           "Sharpdis.Common": "1.0.0",
           "Sharpdis.Untils": "1.0.0"
         },
         "runtime": {
-          "Sharpdis.DataStructure.dll": {}
+          "Sharpdis.DataBase.dll": {}
         }
       },
       "Sharpdis.Log/1.0.0": {
@@ -180,22 +196,6 @@
         },
         "runtime": {
           "Sharpdis.Log.dll": {}
-        }
-      },
-      "Sharpdis.Net/1.0.0": {
-        "dependencies": {
-          "DotNetty.Buffers": "0.7.5",
-          "DotNetty.Codecs": "0.7.5",
-          "DotNetty.Common": "0.7.5",
-          "DotNetty.Handlers": "0.7.5",
-          "DotNetty.Transport": "0.7.5",
-          "Sharpdis.Common": "1.0.0",
-          "Sharpdis.DataStructure": "1.0.0",
-          "Sharpdis.Log": "1.0.0",
-          "Sharpdis.Untils": "1.0.0"
-        },
-        "runtime": {
-          "Sharpdis.Net.dll": {}
         }
       },
       "Sharpdis.Untils/1.0.0": {
@@ -317,17 +317,17 @@
       "serviceable": false,
       "sha512": ""
     },
-    "Sharpdis.DataStructure/1.0.0": {
+    "Sharpdis.Core/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Sharpdis.DataBase/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
     },
     "Sharpdis.Log/1.0.0": {
-      "type": "project",
-      "serviceable": false,
-      "sha512": ""
-    },
-    "Sharpdis.Net/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
