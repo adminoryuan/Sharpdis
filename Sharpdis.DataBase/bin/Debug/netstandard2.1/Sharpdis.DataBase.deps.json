@@ -1,0 +1,51 @@
+{
+  "runtimeTarget": {
+    "name": ".NETStandard,Version=v2.1/",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETStandard,Version=v2.1": {},
+    ".NETStandard,Version=v2.1/": {
+      "Sharpdis.DataBase/1.0.0": {
+        "dependencies": {
+          "Sharpdis.Common": "1.0.0",
+          "Sharpdis.Untils": "1.0.0"
+        },
+        "runtime": {
+          "Sharpdis.DataBase.dll": {}
+        }
+      },
+      "Sharpdis.Common/1.0.0": {
+        "runtime": {
+          "Sharpdis.Common.dll": {}
+        }
+      },
+      "Sharpdis.Untils/1.0.0": {
+        "dependencies": {
+          "Sharpdis.Common": "1.0.0"
+        },
+        "runtime": {
+          "Sharpdis.Untils.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Sharpdis.DataBase/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Sharpdis.Common/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Sharpdis.Untils/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

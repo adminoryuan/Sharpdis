@@ -51,9 +51,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\daima\\sharpdis\\Sharpdis\\Sharpdis.DataStructure\\Sharpdis.DataStructure.csproj",
-      "projectName": "Sharpdis.DataStructure",
-      "projectPath": "D:\\daima\\sharpdis\\Sharpdis\\Sharpdis.DataStructure\\Sharpdis.DataStructure.csproj",
+      "projectUniqueName": "D:\\daima\\sharpdis\\Sharpdis\\Sharpdis.DataStructure\\Sharpdis.DataBase.csproj",
+      "projectName": "Sharpdis.DataBase",
+      "projectPath": "D:\\daima\\sharpdis\\Sharpdis\\Sharpdis.DataStructure\\Sharpdis.DataBase.csproj",
       "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
       "outputPath": "D:\\daima\\sharpdis\\Sharpdis\\Sharpdis.DataStructure\\obj\\",
       "projectStyle": "PackageReference",
