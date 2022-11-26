@@ -17,7 +17,7 @@ namespace Sharpdis.DataStructure.cmd
         {
             string key = args[1];
 
-            var l = CmdTable.db.getStrucutr(key);
+            var l = CmdTable.db.getStrucutr(key, CmdTable.db.GetSelectIndex());
             if (l == null)
             {
                 return new RespResEntity(false, "nil!");
@@ -31,7 +31,7 @@ namespace Sharpdis.DataStructure.cmd
             if (args.Length < 1) return new RespResEntity(false, "wrong number of arguments for 'lPush' command ");
             string key = args[1];
 
-            var l =  CmdTable.db.getStrucutr(key);
+            var l =  CmdTable.db.getStrucutr(key, CmdTable.db.GetSelectIndex());
             if (l == null)
             {
                 return new RespResEntity(false, "nil");
@@ -43,7 +43,7 @@ namespace Sharpdis.DataStructure.cmd
             if (args.Length < 1) return new RespResEntity(false, "wrong number of arguments for 'lPush' command ");
 
             string key = args[1];
-            var l =  CmdTable.db.getStrucutr(key);
+            var l =  CmdTable.db.getStrucutr(key, CmdTable.db.GetSelectIndex());
             if (l == null)
             {
                 return new RespResEntity(false, "nil!");

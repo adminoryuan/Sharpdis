@@ -225,6 +225,9 @@
       "Sharpdis.Common/1.0.0": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.1",
+        "dependencies": {
+          "DotNetty.Buffers": "0.7.5"
+        },
         "compile": {
           "bin/placeholder/Sharpdis.Common.dll": {}
         },
@@ -272,7 +275,8 @@
         "framework": ".NETStandard,Version=v2.1",
         "dependencies": {
           "DotNetty.Buffers": "0.7.5",
-          "Sharpdis.Common": "1.0.0"
+          "Sharpdis.Common": "1.0.0",
+          "Sharpdis.Untils": "1.0.0"
         },
         "compile": {
           "bin/placeholder/Sharpdis.Log.dll": {}

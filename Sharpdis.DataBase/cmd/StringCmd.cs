@@ -20,7 +20,7 @@ namespace Sharpdis.DataStructure.cmd
         {
             if (cmd.Length < 2) return RespResUntils.getArgsError();
             string key = cmd[1];
-            var l =  CmdTable.db.getStrucutr(key);
+            var l =  CmdTable.db.getStrucutr(key, CmdTable.db.GetSelectIndex());
             if (l == null) return new RespResEntity(false, "nil");
             bool res = ((StringStructure)l).incr();
 
@@ -31,7 +31,7 @@ namespace Sharpdis.DataStructure.cmd
         {
             if (cmd.Length < 2) return RespResUntils.getArgsError();
             string key = cmd[1];
-            var l =  CmdTable.db.getStrucutr(key);
+            var l =  CmdTable.db.getStrucutr(key, CmdTable.db.GetSelectIndex());
             if (l == null) return new RespResEntity(false, "nil");
 
             return new RespResEntity(true,  CmdTable.db.CrateStrucutr<StringStructure>(key).get());

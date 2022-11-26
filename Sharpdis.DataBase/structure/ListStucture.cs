@@ -12,9 +12,9 @@ namespace Sharpdis.DataStructure.structure
         {
             return link.Count;
         }
-        public string LPop()
+        public string? LPop()
         {
-            string val= link.First?.Value;
+            string val= link.First.Value;
             
             if(val!=null)
                 link.RemoveFirst();
@@ -24,7 +24,7 @@ namespace Sharpdis.DataStructure.structure
 
         public string RPop()
         {
-            string val = link.Last?.Value;
+            string val = link.Last.Value;
 
             if(val!=null)
                 link.RemoveLast();
@@ -45,7 +45,7 @@ namespace Sharpdis.DataStructure.structure
                  link.AddFirst(val);
             return true;
         }
-        public string lindex(int index)
+        public string? lindex(int index)
         {
             if (index >= 0)
             {
@@ -81,7 +81,7 @@ namespace Sharpdis.DataStructure.structure
             {
                 args[start] = last?.Value;
                 start++;
-                last = last.Next;
+                last = last?.Next;
             }
             return args;
         }

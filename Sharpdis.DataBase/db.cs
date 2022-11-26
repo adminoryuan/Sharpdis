@@ -51,7 +51,7 @@ namespace Sharpdis.DataStructure
         /// <typeparam name="T">类型</typeparam>
         /// <param name="key">建名称</param>
         /// <returns></returns>
-        public  T CrateStrucutr<T>(string key) where T : Structure
+        public T? CrateStrucutr<T>(string key) where T : Structure
         {
             var val = dbs[selectIndex].GetValueOrDefault(key,null);
 
@@ -71,17 +71,24 @@ namespace Sharpdis.DataStructure
 
                 dbs[selectIndex][key] = val;
             }
-            return (T)val;
+            
+            return val==null?null:(T)val;
         }
+
+        public int GetSelectIndex()
+        {
+            return selectIndex;
+        }
+
         /// <summary>
         /// 不存在则返回null
         /// </summary>
         /// <param name="key">建</param>
         /// <returns></returns>
-        
-        public  Structure getStrucutr(string key)
+
+        public  Structure? getStrucutr(string key, int selectIndex)
         {
-            return dbs[selectIndex].GetValueOrDefault(key, null);
+            return dbs[selectIndex]?.GetValueOrDefault(key, null);
         }
     }
 }

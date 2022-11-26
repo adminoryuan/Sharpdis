@@ -11,6 +11,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Sharpdis.Common\Sharpdis.Common.csproj" />
+    <ProjectReference Include="..\Sharpdis.Untils\Sharpdis.Untils.csproj" />
   </ItemGroup>
 
 </Project>

@@ -5,4 +5,8 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="DotNetty.Buffers" Version="0.7.5" />
+  </ItemGroup>
+
 </Project>

@@ -26,15 +26,12 @@ namespace Sharpdis.Core.impl
         }
         public RespResEntity? execute(RespRequestEntity respReq)
         {
-            Console.WriteLine($"{respReq.headers}");
             var res = CmdTable.GetCmdFunc(respReq.headers)?.Invoke(respReq.body);
-
-            //如何是写命令 且执行成功了 则需要写入aof
-            if (res.IsSucess &&
-                                LoggerUntils.IsWriteCmd(respReq.headers))
-            {
-                absLog.WriteLog(respReq.respBody);
-            }
+            
+            //命令成功写入后追加日志
+            if(res!=null && res.IsSucess)
+                absLog.AppendLogAsync(respReq);
+         
             return res;
         }
     }

@@ -17,20 +17,20 @@ namespace Sharpdis.Common.Entity
         /// <summary>
         /// 命令行命令与命令行参数
         /// </summary>
-        private string[] cmd;
+        private string[] _body;
 
         private byte[] _respBody;
         public RespRequestEntity(string headers, string[] body, byte[] respBody)
         {
-            this.headers = headers;
-            this.body = body;
+            this._headers = headers;
+            this._body = body;
             this._respBody = respBody;   
         }
-        public byte[] respBody { get { return _respBody; } }
+        public byte[] respBody { get { return _respBody; }  set { _respBody = value; } }
 
         public string headers { get { return _headers; } set { _headers = value; } }
 
-        public string[] body { get { return cmd; } set { cmd = value; } }
+        public string[] body { get { return _body; } set { _body = value; } }
     }
 
 }

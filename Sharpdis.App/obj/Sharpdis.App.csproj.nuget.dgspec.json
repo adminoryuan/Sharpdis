@@ -104,6 +104,12 @@
       "frameworks": {
         "netstandard2.1": {
           "targetAlias": "netstandard2.1",
+          "dependencies": {
+            "DotNetty.Buffers": {
+              "target": "Package",
+              "version": "[0.7.5, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -302,6 +308,9 @@
             "projectReferences": {
               "D:\\daima\\sharpdis\\Sharpdis\\Sharpdis.Common\\Sharpdis.Common.csproj": {
                 "projectPath": "D:\\daima\\sharpdis\\Sharpdis\\Sharpdis.Common\\Sharpdis.Common.csproj"
+              },
+              "D:\\daima\\sharpdis\\Sharpdis\\Sharpdis.Untils\\Sharpdis.Untils.csproj": {
+                "projectPath": "D:\\daima\\sharpdis\\Sharpdis\\Sharpdis.Untils\\Sharpdis.Untils.csproj"
               }
             }
           }
