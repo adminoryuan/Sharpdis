@@ -2,6 +2,7 @@
 using DotNetty.Transport.Bootstrapping;
 using DotNetty.Transport.Channels;
 using DotNetty.Transport.Channels.Sockets;
+using Sharpdis.Common;
 using Sharpdis.Common.Entity;
 using Sharpdis.DataStructure;
 using Sharpdis.DataStructure.cmd;
@@ -9,6 +10,7 @@ using Sharpdis.Net.codec;
 using Sharpdis.Net.handle;
 using System;
 using System.Collections.Generic;
+using System.Net;
 using System.Reflection.Emit;
 using System.Text;
 
@@ -20,17 +22,11 @@ namespace Sharpdis.Net.impl
     {
         public SharpServer()
         {
-            LoadConfig();
+            Database.newInstance().Init();
         }
 
-        /// <summary>
-        /// 加载配置文件
-        /// </summary>
-        private void LoadConfig()
-        {
 
-        }
-        public async void Start(int port = 6379)
+        public async void Start()
         {
             var boosgroup= new MultithreadEventLoopGroup(3); //boss 线程
             var workgroup = new MultithreadEventLoopGroup(1); //work 线程
@@ -52,10 +48,9 @@ namespace Sharpdis.Net.impl
                     pipelin.AddLast(new SharpdisHandle());
                 }));
 
-            
-            Console.WriteLine("[Sharpdis] Server start [6379]");
-
-            var chanle =await bootstrap.BindAsync(6379);
+            Console.WriteLine($"[Sharpdis] Server start [{Global.config.Bind}:{Global.config.Port}]");
+           
+            var chanle =await bootstrap.BindAsync(IPAddress.Parse(Global.config.Bind),Global.config.Port);
             
         }
         

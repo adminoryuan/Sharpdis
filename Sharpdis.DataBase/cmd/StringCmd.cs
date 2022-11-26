@@ -14,13 +14,13 @@ namespace Sharpdis.DataStructure.cmd
             if (cmd.Length < 3) return RespResUntils.getArgsError();
             string key = cmd[1];
             string val = cmd[2];
-            return new RespResEntity(true, Database.CrateStrucutr<StringStructure>(key).set(val));
+            return new RespResEntity(true,  CmdTable.db.CrateStrucutr<StringStructure>(key).set(val));
         }
         public static RespResEntity Incr(string[] cmd)
         {
             if (cmd.Length < 2) return RespResUntils.getArgsError();
             string key = cmd[1];
-            var l = Database.getStrucutr(key);
+            var l =  CmdTable.db.getStrucutr(key);
             if (l == null) return new RespResEntity(false, "nil");
             bool res = ((StringStructure)l).incr();
 
@@ -31,10 +31,10 @@ namespace Sharpdis.DataStructure.cmd
         {
             if (cmd.Length < 2) return RespResUntils.getArgsError();
             string key = cmd[1];
-            var l = Database.getStrucutr(key);
+            var l =  CmdTable.db.getStrucutr(key);
             if (l == null) return new RespResEntity(false, "nil");
 
-            return new RespResEntity(true, Database.CrateStrucutr<StringStructure>(key).get());
+            return new RespResEntity(true,  CmdTable.db.CrateStrucutr<StringStructure>(key).get());
 
         }
 

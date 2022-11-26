@@ -12,6 +12,8 @@ namespace Sharpdis.DataStructure
 
     public static class CmdTable
     {
+        public static  Database db =  Database.newInstance();
+
         /// <summary>
         /// 保存命令与func 的对应关系
         /// </summary>

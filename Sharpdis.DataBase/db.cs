@@ -1,30 +1,48 @@
-﻿using Sharpdis.DataStructure.structure;
+﻿using Sharpdis.Common;
+using Sharpdis.Common.Entity;
+using Sharpdis.DataStructure.structure;
 using System;
 using System.Collections.Generic;
 using System.Text;
 
 namespace Sharpdis.DataStructure
 {
-    static class Database
+   public  class  Database
     {
+
+        private static Database instan = null;
+
+        public static  Database newInstance()
+        {
+            if (instan == null)
+                instan = new  Database();
+            return instan;
+        }
+
         /// <summary>
         /// db数量
         /// </summary>
-        private static readonly int MAXdb = 10;
+        private  readonly int MAXdb = 10;
 
         /// <summary>
         /// 保存所有数据
         /// </summary>
-        private static Dictionary<string, Structure>[] dbs = new Dictionary<string, Structure>[MAXdb];
+        private  Dictionary<string, Structure>[] dbs ;
 
-        private static int selectIndex = 0;
+        private  int selectIndex = 0;
 
-        static Database()
+
+        public void Init()
         {
-            //初始化
-            for (int i = 0; i < MAXdb; i++)
-                    dbs[i] = new Dictionary<string, Structure>();
-            
+            selectIndex = Global.config.DataBase;
+            dbs = new Dictionary<string, Structure>[MAXdb];
+            for (int i = 0; i < MAXdb; i++) 
+                dbs[i] = new Dictionary<string, Structure>();
+        }
+        private  Database()
+        {
+
+           
         }
 
         /// <summary>
@@ -33,7 +51,7 @@ namespace Sharpdis.DataStructure
         /// <typeparam name="T">类型</typeparam>
         /// <param name="key">建名称</param>
         /// <returns></returns>
-        public static T CrateStrucutr<T>(string key) where T : Structure
+        public  T CrateStrucutr<T>(string key) where T : Structure
         {
             var val = dbs[selectIndex].GetValueOrDefault(key,null);
 
@@ -61,7 +79,7 @@ namespace Sharpdis.DataStructure
         /// <param name="key">建</param>
         /// <returns></returns>
         
-        public static Structure getStrucutr(string key)
+        public  Structure getStrucutr(string key)
         {
             return dbs[selectIndex].GetValueOrDefault(key, null);
         }

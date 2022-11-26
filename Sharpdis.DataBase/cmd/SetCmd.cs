@@ -16,7 +16,7 @@ namespace Sharpdis.DataStructure.cmd
 
             string key = cmd[1];
 
-            Database.CrateStrucutr<SetStructure>(key).SAdd(cmd.Skip(2).Take(cmd.Length - 1).ToArray());
+             CmdTable.db.CrateStrucutr<SetStructure>(key).SAdd(cmd.Skip(2).Take(cmd.Length - 1).ToArray());
 
             return new RespResEntity(true, "ok");
         }
@@ -25,7 +25,7 @@ namespace Sharpdis.DataStructure.cmd
             if (cmd.Length < 2) return RespResUntils.getArgsError();
             string key = cmd[1];
 
-            var l = Database.getStrucutr(key);
+            var l =  CmdTable.db.getStrucutr(key);
 
             if (l == null) return RespResUntils.getNilRes();
 
