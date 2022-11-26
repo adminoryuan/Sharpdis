@@ -11,3 +11,5 @@ D:\daima\sharpdis\Sharpdis\Sharpdis.Log\obj\Debug\netstandard2.1\Sharpdis.Log.pd
 D:\daima\sharpdis\Sharpdis\Sharpdis.Log\bin\Debug\netstandard2.1\Sharpdis.Common.dll
 D:\daima\sharpdis\Sharpdis\Sharpdis.Log\bin\Debug\netstandard2.1\Sharpdis.Common.pdb
 D:\daima\sharpdis\Sharpdis\Sharpdis.Log\obj\Debug\netstandard2.1\Sharpdis.Log.csproj.CopyComplete
+D:\daima\sharpdis\Sharpdis\Sharpdis.Log\bin\Debug\netstandard2.1\Sharpdis.Untils.dll
+D:\daima\sharpdis\Sharpdis\Sharpdis.Log\bin\Debug\netstandard2.1\Sharpdis.Untils.pdb

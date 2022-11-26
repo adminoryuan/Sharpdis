@@ -160,6 +160,9 @@
         }
       },
       "Sharpdis.Common/1.0.0": {
+        "dependencies": {
+          "DotNetty.Buffers": "0.7.5"
+        },
         "runtime": {
           "Sharpdis.Common.dll": {}
         }
@@ -192,7 +195,8 @@
       "Sharpdis.Log/1.0.0": {
         "dependencies": {
           "DotNetty.Buffers": "0.7.5",
-          "Sharpdis.Common": "1.0.0"
+          "Sharpdis.Common": "1.0.0",
+          "Sharpdis.Untils": "1.0.0"
         },
         "runtime": {
           "Sharpdis.Log.dll": {}

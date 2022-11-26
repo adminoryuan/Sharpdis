@@ -26,7 +26,6 @@ namespace Sharpdis.Core.impl
         }
         public RespResEntity? execute(RespRequestEntity respReq)
         {
-            Console.WriteLine($"{respReq.headers}");
             var res = CmdTable.GetCmdFunc(respReq.headers)?.Invoke(respReq.body);
             
             //命令成功写入后追加日志

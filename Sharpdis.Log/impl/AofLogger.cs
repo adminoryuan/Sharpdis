@@ -30,8 +30,8 @@ namespace Sharpdis.Log.impl
 
         public override async void AppendLogAsync(RespRequestEntity req)
         {
-            
-             await WriteAsync(req.respBody);
+             if(LoggerUntils.IsWriteCmd(req.headers))
+                await WriteAsync(req.respBody);
         }
 
         /// <summary>
@@ -39,16 +39,22 @@ namespace Sharpdis.Log.impl
         /// </summary>
         /// <param name="func">解析出命令后回调</param>
         public override void LoadLog(Action<Common.Entity.RespRequestEntity> func)
-        {   
+        {
+            try { 
+            if (!File.Exists(_fileName))
+                return;
+                var body= File.ReadAllBytes(_fileName);
 
-            var body= File.ReadAllBytes(_fileName);
-
-            var buf = Unpooled.Buffer();
+                var buf = Unpooled.Buffer();
             
-            buf.WriteBytes(body);
+                buf.WriteBytes(body);
             
-            //解析日志
-            RespParser.Parser(buf, func);
+                //解析日志
+                RespParser.Parser(buf, func);
+            }catch(Exception e)
+            {
+                Console.WriteLine("resp parser Error!!");
+            }
 
         }
  

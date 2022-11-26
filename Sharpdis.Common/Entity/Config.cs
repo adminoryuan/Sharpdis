@@ -12,8 +12,8 @@ namespace Sharpdis.Common.Entity
         public int DataBase { get;set; }
 
         public int MaxClients { get; set; }
-        public string AppendOnly { get; set; }
-        public string dbfilename { get; set; }
-        public string AppendFilename { get; set; }
+        public string? AppendOnly { get; set; }
+        public string? dbfilename { get; set; }
+        public string? AppendFilename { get; set; }
     }
 }

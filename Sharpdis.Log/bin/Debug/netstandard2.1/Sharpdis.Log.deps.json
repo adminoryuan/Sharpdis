@@ -10,7 +10,8 @@
       "Sharpdis.Log/1.0.0": {
         "dependencies": {
           "DotNetty.Buffers": "0.7.5",
-          "Sharpdis.Common": "1.0.0"
+          "Sharpdis.Common": "1.0.0",
+          "Sharpdis.Untils": "1.0.0"
         },
         "runtime": {
           "Sharpdis.Log.dll": {}
@@ -157,8 +158,19 @@
         }
       },
       "Sharpdis.Common/1.0.0": {
+        "dependencies": {
+          "DotNetty.Buffers": "0.7.5"
+        },
         "runtime": {
           "Sharpdis.Common.dll": {}
+        }
+      },
+      "Sharpdis.Untils/1.0.0": {
+        "dependencies": {
+          "Sharpdis.Common": "1.0.0"
+        },
+        "runtime": {
+          "Sharpdis.Untils.dll": {}
         }
       }
     }
@@ -261,6 +273,11 @@
       "hashPath": "system.runtime.compilerservices.unsafe.5.0.0.nupkg.sha512"
     },
     "Sharpdis.Common/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Sharpdis.Untils/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
