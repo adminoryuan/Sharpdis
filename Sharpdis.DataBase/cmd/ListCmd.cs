@@ -12,12 +12,12 @@ namespace Sharpdis.DataStructure.cmd
     /// list命令的具体实现
     /// </summary>
      static class ListCmd
-    {
+     {
         public static RespResEntity lLen(string[] args)
         {
             string key = args[1];
 
-            var l = Database.getStrucutr(key);
+            var l = CmdTable.db.getStrucutr(key);
             if (l == null)
             {
                 return new RespResEntity(false, "nil!");
@@ -31,7 +31,7 @@ namespace Sharpdis.DataStructure.cmd
             if (args.Length < 1) return new RespResEntity(false, "wrong number of arguments for 'lPush' command ");
             string key = args[1];
 
-            var l = Database.getStrucutr(key);
+            var l =  CmdTable.db.getStrucutr(key);
             if (l == null)
             {
                 return new RespResEntity(false, "nil");
@@ -43,7 +43,7 @@ namespace Sharpdis.DataStructure.cmd
             if (args.Length < 1) return new RespResEntity(false, "wrong number of arguments for 'lPush' command ");
 
             string key = args[1];
-            var l = Database.getStrucutr(key);
+            var l =  CmdTable.db.getStrucutr(key);
             if (l == null)
             {
                 return new RespResEntity(false, "nil!");
@@ -59,7 +59,7 @@ namespace Sharpdis.DataStructure.cmd
             string key = args[1];
             string val = args[2];
 
-            return new RespResEntity(true, Database.CrateStrucutr<ListStucture>(key).LPush(args.Skip(2).Take(args.Length - 2).ToArray()) ? "ok" : "error");
+            return new RespResEntity(true,  CmdTable.db.CrateStrucutr<ListStucture>(key).LPush(args.Skip(2).Take(args.Length - 2).ToArray()) ? "ok" : "error");
         }
 
         public static RespResEntity RPush(string[] args)
@@ -70,7 +70,7 @@ namespace Sharpdis.DataStructure.cmd
             }
             string key = args[1];
 
-            return new RespResEntity(true, Database.CrateStrucutr<ListStucture>(key).RPush(args.Skip(2).Take(args.Length - 2).ToArray()) ? "ok" : "err");
+            return new RespResEntity(true,  CmdTable.db.CrateStrucutr<ListStucture>(key).RPush(args.Skip(2).Take(args.Length - 2).ToArray()) ? "ok" : "err");
         }
         public static RespResEntity LIndex(string[] args)
         {
@@ -86,7 +86,7 @@ namespace Sharpdis.DataStructure.cmd
 
             }
 
-            return new RespResEntity(true, Database.CrateStrucutr<ListStucture>(key).lindex(val));
+            return new RespResEntity(true,  CmdTable.db.CrateStrucutr<ListStucture>(key).lindex(val));
 
 
         }
@@ -103,7 +103,7 @@ namespace Sharpdis.DataStructure.cmd
             {
                 return new RespResEntity(false, "wrong number of arguments for 'lRange' command");
             }
-            return new RespResEntity(true, Database.CrateStrucutr<ListStucture>(key).lrange(startindex, stopindex));
+            return new RespResEntity(true,  CmdTable.db.CrateStrucutr<ListStucture>(key).lrange(startindex, stopindex));
 
         }
         static ListCmd()

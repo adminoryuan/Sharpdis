@@ -18,7 +18,7 @@ namespace Sharpdis.DataStructure.cmd
 
             string key = cmd[1];
             string hkey = cmd[2];
-            var l = Database.getStrucutr(key);
+            var l =  CmdTable.db.getStrucutr(key);
 
             if (l == null) return new RespResEntity(false, "nil");
 
@@ -27,14 +27,14 @@ namespace Sharpdis.DataStructure.cmd
 
         public static RespResEntity hset(string[] cmd)
         {
-            if (cmd.Length < 3)
+            if (cmd.Length < 4)
             {
                 return RespResUntils.getArgsError();
             }
             string key = cmd[1];
             string hkey = cmd[2];
             string hval = cmd[3];
-            return new RespResEntity(true, Database.CrateStrucutr<HashStucture>(key).Hset(hkey, hval));
+            return new RespResEntity(true,  CmdTable.db.CrateStrucutr<HashStucture>(key).Hset(hkey, hval));
         }
         public static RespResEntity hgetall(string[] cmd)
         {
@@ -43,7 +43,7 @@ namespace Sharpdis.DataStructure.cmd
                 return RespResUntils.getArgsError();
             }
             string key = cmd[1];
-            var l = Database.getStrucutr(key);
+            var l =  CmdTable.db.getStrucutr(key);
 
             if (l == null) return new RespResEntity(false, "nil");
 
@@ -57,7 +57,7 @@ namespace Sharpdis.DataStructure.cmd
             }
             string key = cmd[1];
             string hkey = cmd[2];
-            var l = Database.getStrucutr(key);
+            var l =  CmdTable.db.getStrucutr(key);
 
             if (l == null) return new RespResEntity(false, "nil");
 
@@ -72,7 +72,7 @@ namespace Sharpdis.DataStructure.cmd
                 return RespResUntils.getArgsError();
             }
             string key = cmd[1];
-            var l = Database.getStrucutr(key);
+            var l =  CmdTable.db.getStrucutr(key);
 
             if (l == null) return new RespResEntity(false, "nil");
 
@@ -86,7 +86,7 @@ namespace Sharpdis.DataStructure.cmd
                 return RespResUntils.getArgsError();
             }
             string key = cmd[1];
-            var l = Database.getStrucutr(key);
+            var l =  CmdTable.db.getStrucutr(key);
 
             if (l == null) return new RespResEntity(false, "nil");
 
@@ -102,9 +102,7 @@ namespace Sharpdis.DataStructure.cmd
 
 
             CmdTable.RegistCmd("hkeys", hkeys);
-
-
-
+             
             CmdTable.RegistCmd("hvals", hvals);
         }
 

@@ -16,7 +16,7 @@ namespace Sharpdis.DataStructure.structure
         }
         public string hget(string key)
         {
-            return _val[key];
+            return _val.GetValueOrDefault<string,string>(key,null);
         }
         public string[] hgetall()
         {

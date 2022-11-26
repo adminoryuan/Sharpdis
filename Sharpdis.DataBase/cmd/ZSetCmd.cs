@@ -16,7 +16,7 @@ namespace Sharpdis.DataStructure.cmd
             {
                 return RespResUntils.getArgsError();
             }
-            var l = Database.getStrucutr(cmd[1]);
+            var l =  CmdTable.db.getStrucutr(cmd[1]);
             
             if (l == null) return new RespResEntity(false, "nil");
 
@@ -29,7 +29,7 @@ namespace Sharpdis.DataStructure.cmd
                 return RespResUntils.getArgsError();
 
             }
-            var l = Database.getStrucutr(cmd[1]);
+            var l =  CmdTable.db.getStrucutr(cmd[1]);
             
             if (l == null) return new RespResEntity(false, "nil");
 
@@ -67,7 +67,7 @@ namespace Sharpdis.DataStructure.cmd
             string Structkey = cmd[1];
 
             object res;
-            if ((res = Database.getStrucutr(Structkey)) == null)
+            if ((res =  CmdTable.db.getStrucutr(Structkey)) == null)
             {
                 return RespResUntils.getNilRes();
             }

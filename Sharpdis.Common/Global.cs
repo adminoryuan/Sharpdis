@@ -10,6 +10,6 @@ namespace Sharpdis.Common
         /// <summary>
         /// 保存配置信息
         /// </summary>
-        public static readonly Config config;
+        public static  Config config;
     }
 }
