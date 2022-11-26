@@ -22,7 +22,7 @@ namespace Sharpdis.DataStructure.structure
 
         private SkipNode head = new SkipNode(0, "");
 
-        private SkipNode[] level;
+        private SkipNode[]? level=null;
 
         private int MaxLevel;
 
@@ -37,7 +37,7 @@ namespace Sharpdis.DataStructure.structure
         /// </summary>
         Random random = new Random();
 
-        public SkipNode Search(int key)
+        public SkipNode? Search(int key)
         {
             SkipNode temp = head;
             while (temp != null)
@@ -174,7 +174,7 @@ namespace Sharpdis.DataStructure.structure
                 }
             }
             int level = 1;//当前层数，从第一层添加(第一层必须添加，先添加再判断)
-            SkipNode downNode = null;//保持前驱节点(即down的指向，初始为null)
+            SkipNode? downNode = null;//保持前驱节点(即down的指向，初始为null)
             while (stack.Count != 0)
             {
                 //在该层插入node

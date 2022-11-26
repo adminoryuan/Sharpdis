@@ -27,7 +27,7 @@ namespace Sharpdis.DataStructure
         /// <summary>
         /// 保存所有数据
         /// </summary>
-        private  Dictionary<string, Structure>[] dbs ;
+        private  Dictionary<string, Structure?>[] dbs ;
 
         private  int selectIndex = 0;
 
@@ -35,9 +35,9 @@ namespace Sharpdis.DataStructure
         public void Init()
         {
             selectIndex = Global.config.DataBase;
-            dbs = new Dictionary<string, Structure>[MAXdb];
+            dbs = new Dictionary<string, Structure?>[MAXdb];
             for (int i = 0; i < MAXdb; i++) 
-                dbs[i] = new Dictionary<string, Structure>();
+                dbs[i] = new Dictionary<string, Structure?>();
         }
         private  Database()
         {

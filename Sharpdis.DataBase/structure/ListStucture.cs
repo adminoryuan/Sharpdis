@@ -22,7 +22,7 @@ namespace Sharpdis.DataStructure.structure
             return val;
         }
 
-        public string RPop()
+        public string? RPop()
         {
             string val = link.Last.Value;
 
