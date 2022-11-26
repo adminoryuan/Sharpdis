@@ -11,7 +11,7 @@ namespace Sharpdis.Core
         public RespResEntity? execute(RespRequestEntity respReq);
 
 
-        private static ConcreteCommand concrcmd;
+        private static ConcreteCommand? concrcmd=null;
         public static ICommand GetCommand()
         {
             if (concrcmd == null)

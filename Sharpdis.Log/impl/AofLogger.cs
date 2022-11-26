@@ -14,7 +14,7 @@ namespace Sharpdis.Log.impl
 {
     public class AofLogger : absLogger
     {
-        private static AofLogger instance;
+        private static AofLogger? instance=null;
 
         private AofLogger() : base("appendonly.aof")
         {
@@ -53,7 +53,7 @@ namespace Sharpdis.Log.impl
                 RespParser.Parser(buf, func);
             }catch(Exception e)
             {
-                Console.WriteLine("resp parser Error!!");
+                Console.WriteLine(e.Message);
             }
 
         }

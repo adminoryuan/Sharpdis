@@ -62,10 +62,11 @@ namespace Sharpdis.Log.parser
                 List<byte> res = new List<byte>();
 
                 byte temp;
-                while ((temp=buffer.ReadByte()) != '\r')
+                while (buffer.ReaderIndex<buffer.WriterIndex-1 && (temp=buffer.ReadByte()) != '\r')
                 {
                     res.Add(temp);
                 }
+                
                 buffer.ReadByte();
 
                 return res.ToArray();

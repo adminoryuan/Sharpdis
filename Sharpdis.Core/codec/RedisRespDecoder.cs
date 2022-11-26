@@ -20,13 +20,25 @@ namespace Sharpdis.Net.codec
        
         protected override void Decode(IChannelHandlerContext context, IByteBuffer input, List<object> output)
         {
-         
+            input.MarkReaderIndex();
+            Console.WriteLine(input.ReadString(input.ReadableBytes,Encoding.UTF8));
+            input.ResetReaderIndex();
             RespParser.Parser(input, new Action<RespRequestEntity>(res =>
             {
                 output.Add(res);
             }));
              
         }
-       
+        public static string ToString( string[] s)
+        {
+            StringBuilder builder = new StringBuilder();
+
+            foreach (var item in s)
+            {
+                builder.Append(item);
+                builder.Append(" ");
+            }
+            return builder.ToString();
+        }
     }
 }
