@@ -1,4 +1,5 @@
-﻿using Sharpdis.Common.Entity;
+﻿using DotNetty.Buffers;
+using Sharpdis.Common.Entity;
  using Sharpdis.Net;
 using System;
 using System.IO;
@@ -15,8 +16,10 @@ namespace Sharpdis.App
         
         static void Main(string[] args)
         {
-            String banner = "  __                                 \r\n /    /                      | /     \r\n(___ (___  ___  ___  ___  ___|   ___ \r\n    )|   )|   )|   )|   )|   )| |___ \r\n __/ |  / |__/||    |__/ |__/ |  __/ \r\n                    |                \r\n";
 
+
+
+            String banner = "     _                          _ _     \r\n    | |                        | (_)    \r\n ___| |__   __ _ _ __ _ __   __| |_ ___ \r\n/ __| '_ \\ / _` | '__| '_ \\ / _` | / __|\r\n\\__ \\ | | | (_| | |  | |_) | (_| | \\__ \\\r\n|___/_| |_|\\__,_|_|  | .__/ \\__,_|_|___/\r\n                     | |                \r\n                     |_|                ";
             var server = ISharpdisServer.GetSharpdis(LoadConfig());
             
             Console.WriteLine(banner);

@@ -26,6 +26,13 @@ namespace Sharpdis.Common.Entity
             this._body = body;
             this._respBody = respBody;   
         }
+        public RespRequestEntity(string headers, params string[] body )
+        {
+            this._headers = headers;
+            this._body = body;
+            this._respBody = respBody;
+        }
+
         public byte[] respBody { get { return _respBody; }  set { _respBody = value; } }
 
         public string headers { get { return _headers; } set { _headers = value; } }

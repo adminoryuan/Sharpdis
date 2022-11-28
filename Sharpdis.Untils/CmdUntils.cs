@@ -13,6 +13,8 @@ namespace Sharpdis.Untils
             cmdSet = new HashSet<string>();
             cmdSet.Add("set");
             cmdSet.Add("hset");
+            cmdSet.Add("lpush");
+            cmdSet.Add("zadd");
 
         }
 

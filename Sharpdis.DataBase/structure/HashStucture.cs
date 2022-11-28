@@ -9,10 +9,10 @@ namespace Sharpdis.DataStructure.structure
     {
         private Dictionary<string, string> _val = new Dictionary<string, string>();
 
-        public string Hset(string key,string val)
+        public int Hset(string key,string val)
         {
             _val[key] = val;
-            return "ok";
+            return _val.Count;
         }
         public string hget(string key)
         {

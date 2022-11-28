@@ -21,8 +21,11 @@ namespace Sharpdis.Net.codec
                 prefix += message.Res == null ? "nil" : message.Res;
                 prefix += "\r\n";
 
-            }
-            else if (message.Res is Array)
+            }else if(message.Res is int)
+            {
+                prefix = $":{message.Res}\r\n";
+
+            }else if (message.Res is Array)
             {
                 Array res = (Array)message.Res;
                 prefix += $"*{res.Length}\r\n";

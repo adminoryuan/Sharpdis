@@ -3,6 +3,7 @@ using Sharpdis.DataStructure.structure;
 using Sharpdis.Untils;
 using System;
 using System.Collections.Generic;
+using System.Security.Cryptography;
 using System.Text;
 
 namespace Sharpdis.DataStructure.cmd
@@ -22,9 +23,10 @@ namespace Sharpdis.DataStructure.cmd
             string key = cmd[1];
             var l =  CmdTable.db.getStrucutr(key, CmdTable.db.GetSelectIndex());
             if (l == null) return new RespResEntity(false, "nil");
-            bool res = ((StringStructure)l).incr();
-
-            return new RespResEntity(res, res ? "ok" : "convent val error");
+            int number = 0;
+            if(!((StringStructure)l).incr(out number))
+                return new RespResEntity(false,  "convent val error");
+            return new RespResEntity(true, number);
 
         }
         public static RespResEntity Get(string[] cmd)
