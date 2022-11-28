@@ -12,14 +12,14 @@ namespace Sharpdis.DataStructure.structure
             _val = val;
             return "ok";
         }
-        public  bool incr()
+        public  bool incr(out int res)
         {
-            int res;
+            
             if (!int.TryParse(_val, out res))
                 return false;
 
-            _val=Convert.ToString(++res) ;
-            
+            _val= (++res).ToString();
+
             return true;
         }
         public string get()

@@ -13,11 +13,10 @@ namespace Sharpdis.Log.parser
 
         public static void Parser(IByteBuffer buffer,Action<RespRequestEntity> func)
         { 
-            while (buffer.ReaderIndex < buffer.WriterIndex) { 
-
+            while (buffer.ReaderIndex < buffer.WriterIndex) {  
                     buffer.MarkReaderIndex();
                     var prifix = buffer.ReadByte();
-                    RespRequestEntity resp=null;
+                    RespRequestEntity? resp=null;
 
                     switch (prifix)
                     {
@@ -25,11 +24,17 @@ namespace Sharpdis.Log.parser
                             int len=int.Parse(Encoding.UTF8.GetString(buffer.ReadLine()));
                              resp=Parser0(len,buffer);
                             break;
+
+                        case (byte)'$':
+                            int m= int.Parse(Encoding.UTF8.GetString(buffer.ReadLine()));
+                            string args =Encoding.UTF8.GetString(buffer.ReadBytes(m).Array);
+                            resp =new RespRequestEntity(args,args);
+                            break;
                         default:
                             buffer.ResetReaderIndex();
                             var line= Encoding.UTF8.GetString(buffer.ReadLine());
                             resp = new RespRequestEntity(line, new string[] { line }, null);
-                            break;
+                        break;
                     }
                 
                     resp.respBody = buffer.Array.Take(buffer.ReaderIndex).ToArray();
