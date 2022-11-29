@@ -7,7 +7,7 @@
 - ![效果图](https://github.com/adminoryuan/img/blob/master/server.png) 
 - [中文](https://github.com/adminoryuan/Sharpdis/blob/master/README_CH.md)
  # How to use ? 
-- ```bash git clone  git@github.com:adminoryuan/Sharpdis.git ```
+- ``` git clone  git@github.com:adminoryuan/Sharpdis.git ```
 - run Sharpdis.app 
 - use redis-cli Link
 
