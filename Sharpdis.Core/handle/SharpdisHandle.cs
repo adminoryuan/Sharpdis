@@ -25,8 +25,7 @@ namespace Sharpdis.Net.handle
             //对命令进行校验
             if (!RespResUntils.ChechCmd(req.body))
             {
-
-                ctx.Channel.WriteAndFlushAsync(new RespResEntity(true, "ERR NOT FOUD CMD"));
+                 ctx.Channel.WriteAndFlushAsync(new RespResEntity(true, "ERR NOT FOUD CMD"));
             }
 
             var res= cmd.execute(req);

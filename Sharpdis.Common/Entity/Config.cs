@@ -15,5 +15,7 @@ namespace Sharpdis.Common.Entity
         public string? AppendOnly { get; set; }
         public string? dbfilename { get; set; }
         public string? AppendFilename { get; set; }
+
+        public string ExpireType { get; set; } = "LazyAndActive";
     }
 }
