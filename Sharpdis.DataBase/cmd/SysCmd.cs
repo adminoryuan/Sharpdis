@@ -1,4 +1,5 @@
 ﻿using Sharpdis.Common.Entity;
+using Sharpdis.DataBase.expire;
 using Sharpdis.DataStructure.structure;
 using Sharpdis.Untils;
 using System;
@@ -19,15 +20,8 @@ namespace Sharpdis.DataStructure.cmd
                 int timeout;
                 if (!StringUntils.Isint(cmd[2], out timeout))
                     return RespResUntils.getArgsError();
-                Structure stuct;
-                if ((stuct = CmdTable.db.getStrucutr(cmd[1])) == null){
-                    return RespResUntils.getNilRes();
-                }
+                return IExpireFactory.AddExpire(cmd[2], timeout);
 
-                stuct.start = TimeUntils.getTimeSpan();
-                stuct.expire = timeout;
-
-                return new RespResEntity(true,timeout);
 
             }));
             CmdTable.RegistCmd("info", new Func<string[], RespResEntity>(cmd =>

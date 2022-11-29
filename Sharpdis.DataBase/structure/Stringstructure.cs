@@ -7,11 +7,15 @@ namespace Sharpdis.DataStructure.structure
     public class StringStructure: Structure
     {
         private string _val;
-        public  string set(string val)
+        public  string set(string[] val)
         {
-            _val = val;
+            
+            
+            _val = val[2];
+            
             return "ok";
         }
+        
         public  bool incr(out int res)
         {
             

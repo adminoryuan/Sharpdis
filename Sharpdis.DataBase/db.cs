@@ -79,6 +79,11 @@ namespace Sharpdis.DataStructure
             
             return val==null?null:(T)val;
         }
+
+        public bool ContainsKey(string key)
+        {
+            return dbs[selectIndex].ContainsKey(key);
+        }
         private void Expire(string key)
         {
             //判断是否包括惰性加载
