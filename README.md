@@ -4,7 +4,7 @@
 - The purpose of this project is to use C # to implement the Redis server,,
 - Project use Net 3.1, dotnetty is used as the network development framework, and resp is used as the communication protocol
 - ![img](https://github.com/adminoryuan/img/blob/master/a.png)
-
+- [中文](https://github.com/adminoryuan/Sharpdis/blob/master/README_CH.md)
  # How to use ? 
 - ```bash git clone  git@github.com:adminoryuan/Sharpdis.git ```
 - run Sharpdis.app 
