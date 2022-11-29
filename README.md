@@ -1,7 +1,8 @@
 # Sharpdis
 ![](https://img.shields.io/badge/mit-Passing-green)
 ![](https://img.shields.io/badge/c%23-9.0-green)
-- 本项目目的使用实现c#来实现redis 服务端 ,项目使用.net 3.1实现,使用dotnetty 作为网络开发框架
+- 本项目目的使用实现c#来实现redis 服务端 ,
+-  项目使用.net 3.1实现,dotnetty 作为网络开发框架,使用resp作为通信协议
 - 本项并非完全复刻redis
 - ![效果图](https://github.com/adminoryuan/img/blob/master/a.png)
 
