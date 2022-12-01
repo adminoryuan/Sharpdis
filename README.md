@@ -1,31 +1,30 @@
 # Sharpdis
+![netstandard2.1](https://img.shields.io/badge/netstandard-2.1-blue)
 ![](https://img.shields.io/badge/mit-Passing-green)
 ![](https://img.shields.io/badge/c%23-9.0-green)
-- 本项目目的使用实现c#来实现redis 服务端 ,项目使用.net 3.1实现,使用dotnetty 作为网络开发框架
-- 本项并非完全复刻redis
+- The purpose of this project is to use c# to implement the Redis server。
+- Project use Net 3.1, dotnetty is used as the network development framework, and resp is used as the communication protocol
+- ![img](https://gitee.com/zhang-haoww/cartographic-bed/blob/master/a.png)
+- ![效果图](https://gitee.com/zhang-haoww/cartographic-bed/blob/master/server.png) 
+- [中文](https://github.com/adminoryuan/Sharpdis/blob/master/README_CN.md)
+ # How to use ? 
+- ``` git clone  git@github.com:adminoryuan/Sharpdis.git ```
+- run Sharpdis.app 
+- use redis-cli connect
 
-![效果图](https://github.com/adminoryuan/img/blob/master/server.png) 
-![效果图](https://github.com/adminoryuan/img/blob/master/a.png)
-
- # 如何使用
-- 下载本仓库
-- 运行Sharpdis.app 屏幕输出Sharpdis 则表示服务端运行成功
-- 打开redis-cli 即可链接服务端
-
-# 实现功能
- - # 数据类型
+# plan
+ - # Datastructure
  - [x] String
  - [x] Set
  - [x] List
  - [x] hash
  - [x] zset
- - # 通信协议
- - [x] RESP 实现
- - # 网络模型
- - [x] 采用reactor模型
- - # 持久化
+ - # Network Module
+ - [x] RESP 
+ - [x] reactor
+ - # log
  - [x] Aof
  - [ ] RDB
-- # 集群
--  [ ] 使用raft 构建集群
+- # cluster
+-  [ ] raft 
 
