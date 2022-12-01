@@ -6,7 +6,7 @@
 - Project use Net 3.1, dotnetty is used as the network development framework, and resp is used as the communication protocol
 - ![img](https://gitee.com/zhang-haoww/cartographic-bed/blob/master/a.png)
 - ![效果图](https://gitee.com/zhang-haoww/cartographic-bed/blob/master/server.png) 
-- [中文](https://github.com/adminoryuan/Sharpdis/blob/master/README_CH.md)
+- [中文](https://github.com/adminoryuan/Sharpdis/blob/master/README_CN.md)
  # How to use ? 
 - ``` git clone  git@github.com:adminoryuan/Sharpdis.git ```
 - run Sharpdis.app 
