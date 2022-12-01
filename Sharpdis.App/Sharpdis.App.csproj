@@ -11,4 +11,10 @@
     <ProjectReference Include="..\Sharpdis.Untils\Sharpdis.Untils.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Update="redis.conf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
 </Project>
