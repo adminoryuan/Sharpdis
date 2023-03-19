@@ -4,7 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-
+using Sharpdis.Common.Expand;
 namespace Sharpdis.DataStructure.cmd
 {
 
@@ -13,10 +13,10 @@ namespace Sharpdis.DataStructure.cmd
     /// </summary>
      static class ListCmd
      {
+        [ArgsVerify(3)]
         public static RespResEntity lLen(string[] args)
         {
             string key = args[1];
-
             var l = CmdTable.db.getStrucutr(key, CmdTable.db.GetSelectIndex());
             if (l == null)
             {
@@ -26,9 +26,9 @@ namespace Sharpdis.DataStructure.cmd
 
             return new RespResEntity(true, value);
         }
+        [ArgsVerify(1)]
         public static RespResEntity LPop(string[] args)
         {
-            if (args.Length < 1) return new RespResEntity(false, "wrong number of arguments for 'lPush' command ");
             string key = args[1];
 
             var l =  CmdTable.db.getStrucutr(key, CmdTable.db.GetSelectIndex());
@@ -38,10 +38,9 @@ namespace Sharpdis.DataStructure.cmd
             }
             return new RespResEntity(true, ((ListStucture)l).LPop());
         }
+        [ArgsVerify(1)]
         public static RespResEntity RPop(string[] args)
         {
-            if (args.Length < 1) return new RespResEntity(false, "wrong number of arguments for 'lPush' command ");
-
             string key = args[1];
             var l =  CmdTable.db.getStrucutr(key, CmdTable.db.GetSelectIndex());
             if (l == null)
@@ -50,34 +49,25 @@ namespace Sharpdis.DataStructure.cmd
             }
             return new RespResEntity(true, ((ListStucture)l).RPop());
         }
+        [ArgsVerify(3)]
         public static RespResEntity lPush(string[] args)
         {
-            if (args?.Length < 3)
-            {
-                return new RespResEntity(false, "wrong number of arguments for 'lPush' command");
-            }
             string key = args[1];
             string val = args[2];
 
             return new RespResEntity(true,  CmdTable.db.CrateStrucutr<ListStucture>(key).LPush(args.Skip(2).Take(args.Length - 2).ToArray()) ? "ok" : "error");
         }
-
+        [ArgsVerify(3)]
         public static RespResEntity RPush(string[] args)
         {
-            if (args?.Length < 3)
-            {
-                return new RespResEntity(false, "wrong number of arguments for 'lPush' command");
-            }
+            
             string key = args[1];
 
             return new RespResEntity(true,  CmdTable.db.CrateStrucutr<ListStucture>(key).RPush(args.Skip(2).Take(args.Length - 2).ToArray()) ? "ok" : "err");
         }
+        [ArgsVerify(3)]
         public static RespResEntity LIndex(string[] args)
         {
-            if (args?.Length < 3)
-            {
-                return new RespResEntity(false, "wrong number of arguments for 'LIndex' command");
-            }
             string key = args[1];
             int val = -1;
             if (!int.TryParse(args[2], out val))
@@ -90,12 +80,9 @@ namespace Sharpdis.DataStructure.cmd
 
 
         }
+        [ArgsVerify(4)]
         public static RespResEntity lRange(string[] args)
         {
-            if (args?.Length < 4)
-            {
-                return new RespResEntity(false, "wrong number of arguments for 'lrange' command");
-            }
             string key = args[1];
 
             int startindex, stopindex;
@@ -108,6 +95,7 @@ namespace Sharpdis.DataStructure.cmd
         }
         static ListCmd()
         {
+
         }
 
         public static void RegistCmd()

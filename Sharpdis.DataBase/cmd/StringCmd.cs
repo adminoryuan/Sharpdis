@@ -1,4 +1,5 @@
 ﻿using Sharpdis.Common.Entity;
+using Sharpdis.Common.Expand;
 using Sharpdis.DataBase.expire;
 using Sharpdis.DataStructure.structure;
 using Sharpdis.Untils;
@@ -12,9 +13,10 @@ namespace Sharpdis.DataStructure.cmd
 {
      static class StringCmd
     {
+        
+        [ArgsVerify(3)]
         public static RespResEntity Set(string[] cmd)
         {
-            if (cmd.Length < 3) return RespResUntils.getArgsError();
             string key = cmd[1];
             bool isExpire=false;
             int timeOut=-1;
@@ -23,13 +25,13 @@ namespace Sharpdis.DataStructure.cmd
                 if (cmd[i].Equals("px"))
                 {
                     isExpire = true;
-                    if (!int.TryParse(cmd[i + 1], out timeOut)) return RespResUntils.getArgsError();
+                    if (!int.TryParse(cmd[i + 1], out timeOut)) return RespResUntils.GetArgsError();
                     timeOut /= 1000;
                 }
                 else if (cmd[i].Equals("ex"))
                 {
                     isExpire = true;
-                    if (!int.TryParse(cmd[i + 1], out timeOut)) return RespResUntils.getArgsError();
+                    if (!int.TryParse(cmd[i + 1], out timeOut)) return RespResUntils.GetArgsError();
                     
                 }
             }
@@ -47,9 +49,10 @@ namespace Sharpdis.DataStructure.cmd
             }
             return res;
         }
+        
+        [ArgsVerify(2)]
         public static RespResEntity Incr(string[] cmd)
         {
-            if (cmd.Length < 2) return RespResUntils.getArgsError();
             string key = cmd[1];
             var l =  CmdTable.db.getStrucutr(key, CmdTable.db.GetSelectIndex());
             if (l == null) return new RespResEntity(false, "nil");
@@ -59,9 +62,10 @@ namespace Sharpdis.DataStructure.cmd
             return new RespResEntity(true, number);
 
         }
+        [ArgsVerify(2)]
         public static RespResEntity Get(string[] cmd)
         {
-            if (cmd.Length < 2) return RespResUntils.getArgsError();
+            if (cmd.Length < 2) return RespResUntils.GetArgsError();
             string key = cmd[1];
             var l =  CmdTable.db.getStrucutr(key, CmdTable.db.GetSelectIndex());
             if (l == null) return new RespResEntity(false, "nil");

@@ -1,4 +1,5 @@
 ﻿using Sharpdis.Common.Entity;
+using Sharpdis.Common.Expand;
 using Sharpdis.Core;
 using Sharpdis.DataStructure;
 using Sharpdis.Log;
@@ -24,9 +25,23 @@ namespace Sharpdis.Core.impl
                 CmdTable.GetCmdFunc(respReq.headers)?.Invoke(respReq.body);
             }));
         }
+      
+       
         public RespResEntity? execute(RespRequestEntity respReq)
         {
-            var res = CmdTable.GetCmdFunc(respReq.headers)?.Invoke(respReq.body);
+            var exeFunc = CmdTable.GetCmdFunc(respReq.headers);
+
+            
+            var verRes = ArgsVerifyUtls.VerifyRequstBody(exeFunc.Method.GetType(), respReq.body);
+
+            //校验数据是否合法
+
+            if (!verRes.Item1)
+            {
+                return RespResUntils.ToErrorRespEntity(verRes.Item2);
+            }
+            var res = exeFunc?.Invoke(respReq.body);
+
             
             //命令成功写入后追加日志
             if(res!=null && res.IsSucess)

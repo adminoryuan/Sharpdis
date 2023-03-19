@@ -1,4 +1,5 @@
 ﻿using Sharpdis.Common.Entity;
+using Sharpdis.Common.Expand;
 using Sharpdis.DataStructure.structure;
 using Sharpdis.Untils;
 using System;
@@ -10,9 +11,10 @@ namespace Sharpdis.DataStructure.cmd
 {
      static class SetCmd
     {
+        [ArgsVerify(3)]
         public static RespResEntity SAdd(string[] cmd)
         {
-            if (cmd.Length < 3) return RespResUntils.getArgsError();
+            if (cmd.Length < 3) return RespResUntils.GetArgsError();
 
             string key = cmd[1];
 
@@ -20,14 +22,15 @@ namespace Sharpdis.DataStructure.cmd
 
             return new RespResEntity(true, "ok");
         }
+        [ArgsVerify(2)]
         public static RespResEntity SMEMBERS(string[] cmd)
         {
-            if (cmd.Length < 2) return RespResUntils.getArgsError();
+            if (cmd.Length < 2) return RespResUntils.GetArgsError();
             string key = cmd[1];
 
             var l =  CmdTable.db.getStrucutr(key, CmdTable.db.GetSelectIndex());
 
-            if (l == null) return RespResUntils.getNilRes();
+            if (l == null) return RespResUntils.GetArgsError();
 
             return new RespResEntity(true, ((SetStructure)l).SMEMBERS());
 

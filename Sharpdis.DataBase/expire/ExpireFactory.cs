@@ -29,7 +29,7 @@ namespace Sharpdis.DataBase.expire
             Structure stuct;
             if ((stuct = CmdTable.db.getStrucutr(key)) == null)
             {
-                return RespResUntils.getNilRes();
+                return RespResUntils.GetArgsError();
             }
 
             stuct.start = TimeUntils.getTimeSpan();
@@ -40,3 +40,4 @@ namespace Sharpdis.DataBase.expire
         }
     }
 }
+    

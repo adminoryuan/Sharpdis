@@ -25,7 +25,7 @@ namespace Sharpdis.DataStructure
             cmdKv = new Dictionary<string, Func<string[], RespResEntity>>(); 
             //初始化所有命令
             SysCmd.RegistCmd();
-            HashCmd.registCmd();
+            HashCmd.RegistCmd();
             ListCmd.RegistCmd();
             SetCmd.RegistCmd();
             StringCmd.registCmd();

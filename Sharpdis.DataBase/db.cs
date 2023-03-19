@@ -39,9 +39,11 @@ namespace Sharpdis.DataStructure
         public void Init()
         {
             selectIndex = Global.config.DataBase;
+            
             dbs = new Dictionary<string, Structure?>[MAXdb];
 
             factory = IExpireFactory.getExpire(Global.config.ExpireType);
+
             for (int i = 0; i < MAXdb; i++) 
                 dbs[i] = new Dictionary<string, Structure?>();
         }

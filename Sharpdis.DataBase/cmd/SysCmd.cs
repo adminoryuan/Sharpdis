@@ -15,11 +15,11 @@ namespace Sharpdis.DataStructure.cmd
             //添加过期时间
             CmdTable.RegistCmd("expire", new Func<string[], RespResEntity>(cmd =>
             {
-                if (cmd != null && cmd.Length != 3) return RespResUntils.getArgsError();
+                if (cmd != null && cmd.Length != 3) return RespResUntils.GetArgsError();
 
                 int timeout;
                 if (!StringUntils.Isint(cmd[2], out timeout))
-                    return RespResUntils.getArgsError();
+                    return RespResUntils.GetArgsError();
                 return IExpireFactory.AddExpire(cmd[2], timeout);
 
 

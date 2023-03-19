@@ -12,16 +12,21 @@ namespace Sharpdis.Untils
 
     public class RespResUntils
     {
-        public static RespResEntity getArgsError()
+        public static RespResEntity GetArgsError()
         {
             return new RespResEntity(false, "Args error");
         }
-        public static RespResEntity getNilRes()
+        public static RespResEntity GetNilRes()
         {
             return new RespResEntity(true, "nil");
         }
 
-        public static RespResEntity getOkRes()
+        public static RespResEntity ToErrorRespEntity(string Message)
+        {
+            return new RespResEntity(false, Message);
+
+        }
+        public static RespResEntity GetOkRes()
         {
             return new RespResEntity(true, "ok");
         }
